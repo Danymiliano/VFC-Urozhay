@@ -25,7 +25,9 @@ body {
     font-family: 'Manrope', sans-serif;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--secondColor);
-    overflow-x: hidden;
+    background-image: url(/img/MainLayerSecond.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -93,28 +95,6 @@ main {
     margin-left: 6px;
 }
 
-.scene {
-    z-index: -1;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    min-height: 100%;
-}
-
-.parallax {
-    position: absolute;
-    left: -10%;
-    top: 0;
-    width: 110%;
-    height: 100%;
-}
-
-.layer__second {
-    background: url(/img/MainLayerSecond.png) no-repeat;
-    background-size: 100%; 
-}
-
 nav {
     display: block;
     align-items: center;
@@ -160,7 +140,7 @@ li:first-child {
 }
 
 .btn {
-    margin-top: 90px;
+    margin-top: 200px;
     width: 300px;
     justify-content: end;
     background-color: transparent;
@@ -168,6 +148,7 @@ li:first-child {
     font-size: 30px;
     padding: 30px;
     border: 2px solid var(--mainColor);
+    cursor: pointer;
 }
 
 .slider__wrapper {
@@ -175,8 +156,58 @@ li:first-child {
 }
 
 .slider__section {
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin-top: 150px;
     background-color: var(--secondColor);
+    color: var(--mainColor);
+}
+
+.slider__section > h1 {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 56px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bolder;
+    line-height: 100%;
+    color: var(--mainColor);
+}
+
+.slider {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 500px;
+}
+
+.slider__line {
+    display: flex;
+    transition: all ease 0.8s;
+}
+
+.button {
+    position: absolute;
+    display: inline;
+    top: 50%;
+    font-size: 90px;
+    text-shadow: 2px 2px 5px var(--secondColor);
+    z-index: 99;
+    color: var(--mainColor);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.slider__prev {
+    right: 95%;
+}
+
+.slider__next {
+    left: 95%;
 }
 
 @media (max-width: 360px) {

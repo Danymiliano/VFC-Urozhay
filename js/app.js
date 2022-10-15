@@ -1,5 +1,3 @@
-
-
 // Анимация для кнопок навигации
 
 const navAnimation = setNavAnimation = () => {
@@ -48,15 +46,45 @@ const setButtonAnimation = () => {
 
 setButtonAnimation()
 
-// Параллакс эффект главной страницы
+// Слайдер
 
-function setBackgroundEffect (event) {
-    this.querySelectorAll('.parallax').forEach(parallax => {
-      const speed = parallax.getAttribute('speed')
-        parallax.style.transform = `translateX(${event.clientX*speed/2000}px)`
-    });
+const images = document.querySelectorAll('.slider .slider__line img');
+const sliderLine = document.querySelector('.slider__line');
+let width;
+let count = 0;
+
+const rollSlider = () => {
+  sliderLine.style.transform = 'translate(-'+ count * width +'px)';
+ }
+
+const setSliderSettings = () => {
+  console.log('resize');
+  width = document.querySelector('.slider').offsetWidth;
+  sliderLine.style.width = width * images.length + 'px';
+  images.forEach(item => {
+    item.style.width = width + 'px';
+    item.style.height ='auto';
+  })
 }
 
-document.addEventListener('mousemove', setBackgroundEffect)
+window.addEventListener('resize', setSliderSettings)
+setSliderSettings()
+
+document.querySelector('.slider__next').addEventListener('click', () => {
+  count++;
+  if (count >= images.length) {
+    count = 0;
+  }
+  rollSlider()
+})
+
+document.querySelector('.slider__prev').addEventListener('click', () => {
+  count--;
+  if (count < 0) {
+    count = images.length - 1;
+  }
+  rollSlider()
+})
+
 
 
