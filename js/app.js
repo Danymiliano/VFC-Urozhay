@@ -50,12 +50,8 @@ setButtonAnimation()
 
 const images = document.querySelectorAll('.slider .slider__line img');
 const sliderLine = document.querySelector('.slider__line');
-let width;
 let count = 0;
-
-const rollSlider = () => {
-  sliderLine.style.transform = 'translate(-'+ count * width +'px)';
- }
+let width;
 
 const setSliderSettings = () => {
   console.log('resize');
@@ -66,9 +62,12 @@ const setSliderSettings = () => {
     item.style.height ='auto';
   })
 }
-
-window.addEventListener('resize', setSliderSettings)
 setSliderSettings()
+window.addEventListener('resize', setSliderSettings)
+
+const rollSlider = () => {
+  sliderLine.style.transform = 'translate(-'+ count * width +'px)';
+ }
 
 document.querySelector('.slider__next').addEventListener('click', () => {
   count++;
@@ -85,6 +84,4 @@ document.querySelector('.slider__prev').addEventListener('click', () => {
   }
   rollSlider()
 })
-
-
 
