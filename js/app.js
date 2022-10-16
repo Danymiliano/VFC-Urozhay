@@ -31,8 +31,7 @@ const setButtonAnimation = () => {
     transition: all 0.2s;
     background-color: var(--mainColor);
     color: var(--secondColor);
-    font-size: 32px;
-    padding: 29px;
+    font-size: 30px;
         `
   },
   button.addEventListener('mouseout', () => {

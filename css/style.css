@@ -401,7 +401,7 @@ li:first-child {
     font-size: 25px;
     opacity: 0.85;
     padding-top: 20px;
-    max-width: 550px;
+    max-width: 600px;
 }
 
 .reverse__text {
@@ -414,20 +414,68 @@ li:first-child {
     line-height: 100%;
 }
 
+.button__captain {
+    max-width: 200px;
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 25px;
+}
+
 .captain__says-image {
     background: url(/img/Difrostt.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 100% 50%;
+    background-position: 100% 10%;
     min-height: 650px;
     min-width: 370px;
-    margin-left: 150px;
+    z-index: 2;
 }
 
 .captain__says-description {
     color: var(--mainColor);
-    margin-top: 755px;
     margin-left: 50px;
+}
+
+.captain__says-description > p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    padding-bottom: 5px;
+    opacity: 0.85;
+}
+
+.captain__says-description > h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 37px;
+}
+
+/* Подвал */
+
+footer {
+    background-color: var(--mainColor);
+}
+
+.footer__wrapper {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.footer__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: var(--secondColor);
+}
+
+.footer__icons {
+    padding: 10px 0;
+}
+
+.footer__content p:last-child {
+    margin-bottom: 10px;
 }
 @media (max-width: 360px) {
 }
