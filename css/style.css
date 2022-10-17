@@ -215,19 +215,6 @@ li:first-child {
     left: 95%;
 }
 
-.button {
-    position: absolute;
-    display: inline;
-    top: 40%;
-    font-size: 90px;
-    text-shadow: 2px 2px 5px var(--secondColor);
-    z-index: 99;
-    color: var(--mainColor);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
 /* История */
 
 .wrapper {
@@ -397,22 +384,17 @@ li:first-child {
     font-size: 25px;
 }
 
-.captain__says-image {
-    background: url(/img/Difrostt.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 100% 10%;
-    min-height: 650px;
-    min-width: 370px;
-    z-index: 2;
+.captain__says-description img {
+    position: relative;
+    width: 50%;
 }
 
 .captain__says-description {
     color: var(--mainColor);
-    margin-left: 50px;
+    display: flex;
 }
 
-.captain__says-description > p {
+.captain__says-text > p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 17px;
@@ -420,7 +402,7 @@ li:first-child {
     opacity: 0.85;
 }
 
-.captain__says-description > h2 {
+.captain__says-text > h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 37px;
