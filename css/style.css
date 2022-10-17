@@ -215,22 +215,6 @@ li:first-child {
     left: 95%;
 }
 
-.second__slider {
-    position: relative;
-    min-height: 10%;
-    min-width: 80%;
-    max-width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 100px;
-}
-
-.second__slider__line {
-    display: flex;
-    transition: all ease 0.8s;
-}
-
 .button {
     position: absolute;
     display: inline;
@@ -242,14 +226,6 @@ li:first-child {
     background-color: transparent;
     border: none;
     cursor: pointer;
-}
-
-.second__slider__prev {
-    right: 100%;
-}
-
-.second__slider__next {
-    left: 100%;
 }
 
 /* История */
@@ -475,7 +451,5 @@ footer {
 }
 
 .footer__content p:last-child {
-    margin-bottom: 10px;
-}
-@media (max-width: 360px) {
+    margin-bottom: 20px;
 }
