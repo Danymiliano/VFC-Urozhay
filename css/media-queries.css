@@ -3,446 +3,367 @@
     /* Основная страница */
 
     .wrapper {
-        max-width: 1300px;
-    }
-
-    main {
-        margin-top: 90px;
-    }
-
-    .btn__description {
-        margin-top: 50px;
-    }
-
-    /* Слайдер */
-
-    .slider__section {
-        margin-top: 80px;
-        margin-bottom: 80px;
-    }
-
-    .button {
-        top: 35%;
-    }
-
-    /* История */
-
-    .about__wrapper {
-        margin: 0 auto;
-        max-width: 1300px;
-    }
-
-    .about__header > h1 {
-        margin-top: 0;
-    }
-
-    .button__about {
-        margin: 30px 0;
-    }
-
-    /* Капитан */
-
-    .captain__says-wrapper {
-        max-width: 1250px;
-    }
-
-    .captain__says-content {
-        padding: 50px 100px 0 50px;
-    }
-
-    .captain__says-header { 
-        font-size: 15px;
-    }
-    
-    .captain__says-footer {
-        font-size: 22px;
-        max-width: 600px;
-    }
-    
-    .reverse__text {
-        max-width: 50%;
-        font-size: 86px;
-    }
-
-    .button__captain {
-        max-width: 200px;
-        margin-top: 95px;
-    }
-
-    /* Подвал */
-
-    .footer__wrapper {
-        max-width: 1300px;
-    }
-}
-
-/* ------------------------------------------ */
-
-@media (max-width: 767px) {
-
-    /* Основная страница */
-
-    .wrapper {
-        max-width: 700px;
-    }
-
-    .btn {
-        font-size: 13px;
-    }
-
-    .navLink {
-        font-size: 17px;
-        padding: 0 10px;
-    }
-
-    .btn__description {
-        margin-top: 10px;
-        width: auto;
-        padding: 15px;
-    }
-
-    .description {
-        margin-top: 10px;
-        font-size: 17px;
-        width: 280px;
-    }
-
-    /* Слайдер */
-
-    .slider__section {
-        margin-top: 50px;
-        margin-bottom: 80px;
-    }
-
-    .slider__prev {
-        right: 90%;
-    }
-    
-    .slider__next {
-        left: 90%;
-    }
-
-    .button {
-        top: 23%;
-    }
-
-    /* История */
-
-    .about__wrapper {
-        margin: 0 auto;
-        max-width: 700px;
-    }
-
-    .about__header > h1 {
-        font-size: 48px;
-    }
-
-    .about__description {
-        font-size: 20px;
-    }
-
-    .button__about {
-        margin: 20px 0;
-        padding: 10px;
-        max-width: 120px;
-        width: auto;
-    }
-
-    .about__background {
-        background-image: url(/img/Background2.png);
-        background-color: var(--secondColor);
-        background-size: 116%;
-        max-width: 1600px;
-        min-width: 99vw;
-        min-height: 1vmax;
-        z-index: -2;
-        background-repeat: no-repeat;
-    }
-
-    /* Капитан */
-
-    .captain__says {
-        margin-top: 30px;
-        margin-bottom: 0;
-        height: 900px;
-    }
-
-    .captain__says-wrapper {
-        max-width: 700px;
-        margin-top: 50px;
-    }
-
-    .captain__says-content {
-        padding: 10px 20px 0 10px;
-        height: 90%;
-    }
-
-    .captain__says-header { 
-        font-size: 10px;
-    }
-    
-    .captain__says-footer {
-        font-size: 17px;
-        max-width: 600px;
-    }
-    
-    .reverse__text {
-        max-width: 17%;
-        font-size: 76px;
-    }
-
-    .button__captain {
-        max-width: 200px;
-        margin-top: 25px;
-    }
-
-    .captain__says-image {
-        background: url(/img/Difrostt.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: 100% 10%;
-        min-height: 450px;
-        max-height: 650px;
-        min-width: 170px;
-        z-index: 2;
-    }
-
-    /* Подвал */
-
-    .footer__wrapper {
-        max-width: 700px;
-    }
-}
-
-@media (max-width: 765px) {
-    /* Основная страница */
-
-    body {
-        font-family: 'Manrope', sans-serif;
-        font-family: 'Montserrat', sans-serif;
-        background-color: var(--secondColor);
-        background-image: url(/img/Background1.png);
-        background-size: 250%;
-        background-repeat: no-repeat;
-    }
-
-    .wrapper {
-        max-width: 340px;
-    }
-
-    a > h1 {
         display: flex;
-        text-align: center;
-        margin-left: 15px;
-        font-size: 23px;
-        font-weight: 400;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 30px 0;
+        width: 85%;
     }
-
+    
     .description__section {
-        margin: 0 auto;
-        justify-content: center;
+        background: url(/img/Background1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100% 190%;
     }
-
+    
+    .header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 85%;
+    }
+    
     .description__header {
-        margin: 5px 0;
+        background: var(--mainColor);
+        background-size: cover;
+        object-fit: cover;
     }
 
-    .btn {
-        font-size: 13px;
-    }
-
-    main {
-        margin-top: 20px;
-    }
-
-    .thebestclub {
-        line-height: 210%;
-    }
-
-    .thebestclub > h1 {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 0 auto;
-        font-size: 58px;
-    }
-
-    .thebestclub > h2 {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-size: 26px;
-    }
-
-    .navLink {
+    nav {
         display: none;
     }
-
-    .btn__description {
-        margin: 30px auto;
-        width: auto;
-        padding: 15px;
+    
+    .navLink {
+        color: var(--secondColor);
+        padding: 0 20px;
     }
-
-    .description {
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 10px;
-        font-size: 17px;
-        width: 280px;
-    }
-
-    /* Слайдер */
-
-    .slider__section > h1 {
+    
+    .header__wrapper > a {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    a > h1 {
+        font-size: 30px;
+    }
+    
+    main {
+        margin: 0;
         text-align: center;
-        margin: 30px auto 30px auto;
+    }
+    
+    .thebestclub {
+        justify-content: center;
+        line-height: 210%;
+        margin: 0 auto;
+    }
+    
+    .thebestclub > h1 {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
         font-size: 58px;
         font-family: 'Manrope', sans-serif;
         font-weight: bolder;
         line-height: 100%;
         color: var(--mainColor);
     }
-
-    .slider__section {
-        margin-top: 80px;
-        margin-bottom: 80px;
+    
+    .thebestclub > h2 {
+        display: flex;
+        margin: 0 auto;
+        font-size: 26px;
+        color: var(--mainColor);
+        font-weight: 200;
+        font-family: 'Montserrat', sans-serif;
     }
-
+    
+    .description {
+        display: flex;
+        flex-direction: column;
+        color: var(--mainColor);
+        margin: 20px auto;
+        font-weight: 200;
+        font-size: 17px;
+        width: 380px;
+        text-align: center;
+        text-shadow: 1px 1px var(--secondColor);
+    }
+    
+    .content__container {
+        display: flex;
+        justify-content: end;
+    }
+    
+    .button__container {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .btn__description {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    /* Слайдеры */
+    
+    .slider__section {
+        background: var(--secondColor);
+        background-size: cover;
+        padding: 50px 0;
+    }
+    
+    .slider__wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        width: 85%;
+    }
+    
+    .slider__wrapper > h1 {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        font-size: 58px;
+        font-family: 'Manrope', sans-serif;
+        font-weight: bolder;
+        line-height: 100%;
+        color: var(--mainColor);
+    }
+    
+    .slider {
+        position: relative;
+        min-width: 80%;
+        max-width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .slider__line {
+        display: flex;
+        transition: all ease 0.8s;
+    }
+    
+    .button {
+        position: absolute;
+        display: inline;
+        top: 40%;
+        font-size: 90px;
+        text-shadow: 2px 2px 5px var(--secondColor);
+        z-index: 99;
+        color: var(--mainColor);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    
     .slider__prev {
-        right: 90%;
+        right: 95%;
     }
     
     .slider__next {
-        left: 90%;
+        left: 95%;
     }
-
-    .button {
-        top: 18%;
-        font-size: 45px;
-    }
-
+    
     /* История */
-
+    
     .about__wrapper {
-        margin: 0 auto;
-        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        margin: 50px auto;
+        max-width: 85%;
     }
-
+    
+    .about__club {
+        display: flex;
+        background: url(/img/Background2.png);
+        background-position: 67% 95%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .about__header {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+    
     .about__header > h1 {
-        margin: 0 auto;
-        text-align: center;
+        color: var(--mainColor);
+        display: flex;
         font-size: 58px;
+        font-family: 'Manrope', sans-serif;
+        font-weight: bolder;
+        line-height: 100%;
     }
-
+    
     .about__description {
-        text-align: center;
-        font-size: 17px;
+        color: var(--mainColor);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
     }
-
-    .button__about {
-        margin: 0 auto 30px auto;
-        text-align: center;
-        padding: 10px;
-        max-width: 120px;
-        width: auto;
-    }
-
+    
     .about__squares {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 20px;
-        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
-
+    
+    .about__squares-left {
+        display: flex;
+    }
+    
+    .about__squares-right {
+        display: flex;
+    }
+    
     .about__squares-left span {
-        width: 7.5px;
-        height: 7.5px;
+        display: flex;
+        width: 10px;
+        height: 10px;
+        margin-left: 15px;
+        background-color: var(--mainColor);
+    }
+    
+    .about__squares-left span:first-child {
+        margin-left: 0;
     }
     
     .about__squares-right span {
-        width: 7.5px;
-        height: 7.5px;
-    }
-
-    .about__background {
-        background-image: url(/img/Background2.png);
-        background-size: 335%;
-        background-position: 60% 5%;
-    }
-
-    /* Капитан */
-
-    .captain__says {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        height: 820px;
-    }
-
-    .captain__says-wrapper {
-        flex-wrap: wrap;
-        max-width: 340px;
-        margin-top: 10px;
-    }
-
-    .captain__says-content {
-        padding: 10px 20px 0 10px;
-        height: 100%;
-    }
-
-    .captain__says-description {
         display: flex;
-        margin-top: 20px;
+        flex-direction: row;
+        width: 10px;
+        height: 10px;
+        margin-right: 15px;
+        background-color: var(--mainColor);
     }
-
-    .captain__says-text {
-        margin-left: 10px;
+    
+    .about__squares-right span:last-child {
+        margin-right: 0;
     }
-
-    .captain__says-text > p {
+    
+    .button__about {
+        margin-top: 40px;
+        max-width: 150px;
+        font-size: 20px;
+    }
+    
+    /* Капитан */
+    
+    .captain__says {
+        display: flex;
+    }
+    
+    .captain__says-wrapper {
+        display: flex;
+        max-width: 100%;
+        margin: 20px 0px 20px 0px;
+    }
+    
+    .captain__says-content {
+        display: flex;
+        padding: 25px 0 0 0;
+        border: none;
+        color: var(--mainColor);
+        background: url(/img/Background3.png);
+        background-size: 620%;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .captain__says-inner {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .captain__says-inner h2 {
+        font-size: 22px;
+        max-width: 600px;
+    }
+    
+    .captain__says-inner {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    
+    .captain__says-header {
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
-        font-size: 12px;
+        font-size: 17px;
         padding-bottom: 5px;
         opacity: 0.85;
     }
     
-    .captain__says-text > h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        font-size: 17px;
-    }
-
-    .captain__says-header { 
-        font-size: 10px;
-    }
-    
     .captain__says-footer {
-        font-size: 17px;
-        max-width: 600px;
+        font-weight: 300;
+        font-size: 18px;
+        opacity: 0.85;
+        padding-top: 10px;
+        max-width: 500px;
     }
     
     .reverse__text {
-        max-width: 17%;
-        font-size: 76px;
+        writing-mode: vertical-lr;
+        display: flex;
+        font-size: 58px;
+        max-width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
     }
-
+    
     .button__captain {
-        max-width: 200px;
-        margin-top: 25px;
+        max-width: 150px;
+        margin-bottom: 20px;
+        font-size: 20px;
     }
-
+    
+    .captain__says-description img {
+        position: static;
+        width: 40%;
+    }
+    
+    .captain__says-description {
+        margin-top: 15px;
+        position: static;
+    }
+    
+    .captain__says-text {
+        position: static;
+        top: 0;
+        left: 0;
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+    
+    .captain__says-text > p {
+        font-size: 12px;
+    }
+    
+    .captain__says-text > h2 {
+        position: static;
+        font-size: 23px;
+    }
+    
     /* Подвал */
-
+    
     .footer__wrapper {
-        max-width: 340px;
+        max-width: 85%;
     }
-
+    
     .footer__content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 }

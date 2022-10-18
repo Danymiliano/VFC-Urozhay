@@ -30,7 +30,7 @@ body {
 .btn {
     background-color: transparent;
     color: var(--mainColor);
-    font-size: 30px;
+    font-size: 15px;
     padding: 30px;
     border: 2px solid var(--mainColor);
     cursor: pointer;
@@ -167,7 +167,7 @@ li:first-child {
 .slider__section {
     background: var(--secondColor);
     background-size: cover;
-    margin: 50px 0;
+    padding: 50px 0;
 }
 
 .slider__wrapper {
@@ -322,9 +322,13 @@ li:first-child {
 
 .captain__says-content {
     display: flex;
-    padding: 50px 50px 50px 50px;
+    padding: 50px 250px 50px 50px;
     border: 2px solid white;
     color: var(--mainColor);
+    background: url(/img/Background3.png);
+    background-size: 250%;
+    background-position: 40% 100%;
+    background-repeat: no-repeat;
 }
 
 .captain__says-inner {
@@ -377,21 +381,21 @@ li:first-child {
 
 .captain__says-description img {
     position: absolute;
-    width: 70%;
+    width: 75%;
 }
 
 .captain__says-description {
-    position: relative;
-    left: 90%;
-    bottom: 75%;
-    color: var(--mainColor);
     display: flex;
+    position: relative;
+    left: 115%;
+    bottom: 80%;
+    color: var(--mainColor);
 }
 
 .captain__says-text {
     position: relative;
     top: 2450%;
-    left: 75%;
+    left: 85%;
 }
 
 .captain__says-text > p {
@@ -418,7 +422,7 @@ footer {
 .footer__wrapper {
     display: flex;
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: 85%;
 }
 
 .footer__content {
@@ -435,4 +439,8 @@ footer {
 
 .footer__content p:last-child {
     margin-bottom: 20px;
+}
+
+.footer__creators p:last-child {
+    margin-top: 20px;
 }
