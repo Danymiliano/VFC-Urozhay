@@ -24,10 +24,7 @@ li {
 body {
     font-family: 'Manrope', sans-serif;
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--secondColor);
-    background-image: url(/img/Background1.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background: var(--secondColor);
 }
 
 .btn {
@@ -41,35 +38,45 @@ body {
 
 .wrapper {
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
-    max-width: 1600px;
+    width: 85%;
 }
 
 .description__section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    background: url(/img/Background1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-header {
+.header__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px auto;
-    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 85%;
+}
+
+.description__header {
+    background: var(--mainColor);
+    background-size: cover;
+    object-fit: cover;
 }
 
 .navLink {
-    color: var(--mainColor);
+    color: var(--secondColor);
     padding: 0 20px;
 }
 
-header > a {
+.header__wrapper > a {
     display: flex;
     align-items: center;
+    
 }
 
 a > h1 {
+    color: var(--secondColor);
     margin-left: 15px;
     font-size: 30px;
     font-weight: 400;
@@ -130,7 +137,7 @@ li:first-child {
     display: flex;
     flex-direction: column;
     color: var(--mainColor);
-    margin-top: 30px;
+    margin: 10px 0 250px 0;
     font-weight: 200;
     font-size: 25px;
     width: 380px;
@@ -144,6 +151,7 @@ li:first-child {
 }
 
 .button__container {
+    margin-top: 50px;
     display: flex;
     justify-content: right;
 }
@@ -156,25 +164,24 @@ li:first-child {
 
 /* Слайдеры */
 
-.slider__wrapper {
-    margin-top: 50px;
+.slider__section {
+    background: var(--secondColor);
+    background-size: cover;
+    margin: 50px 0;
 }
 
-.slider__section {
+.slider__wrapper {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     width: 100%;
-    justify-content: center;
-    margin-top: 200px;
-    background-color: var(--secondColor);
-    color: var(--mainColor);
 }
 
-.slider__section > h1 {
+.slider__wrapper > h1 {
     display: flex;
     margin: 0 auto;
     margin-bottom: 50px;
-    font-size: 56px;
+    font-size: 98px;
     font-family: 'Manrope', sans-serif;
     font-weight: bolder;
     line-height: 100%;
@@ -197,7 +204,7 @@ li:first-child {
 .button {
     position: absolute;
     display: inline;
-    top: 50%;
+    top: 40%;
     font-size: 90px;
     text-shadow: 2px 2px 5px var(--secondColor);
     z-index: 99;
@@ -217,46 +224,28 @@ li:first-child {
 
 /* История */
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 1600px;
-    overflow: hidden;
-}
-
-.about__background {
-    background-image: url(/img/Background2.png);
-    background-color: var(--mainColor);
-    background-size: 100%;
-    max-width: 1600px;
-    min-width: 99vw;
-    min-height: 100vh;
-    z-index: -2;
-    background-repeat: no-repeat;
-}
-
 .about__wrapper {
     display: flex;
-    margin: 150px auto;
-    max-width: 1400px;
+    flex-direction: column;
+    margin: 100px auto;
+    max-width: 85%;
 }
 
 .about__club {
     display: flex;
-    flex-direction: column;
-    color: var(--mainColor);
+    background: url(/img/Background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .about__header {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    margin-bottom: 20px;
 }
 
 .about__header > h1 {
     color: var(--mainColor);
-    margin-top: 60px;
     display: flex;
     font-size: 98px;
     font-family: 'Manrope', sans-serif;
@@ -323,19 +312,17 @@ li:first-child {
 
 .captain__says {
     display: flex;
-    margin-top: 80px;
-    margin-bottom: 80px;
 }
 
 .captain__says-wrapper {
     display: flex;
-    margin: 0 auto;
-    max-width: 1550px;
+    max-width: 100%;
+    margin: 50px 0 50px 100px;
 }
 
 .captain__says-content {
     display: flex;
-    padding: 80px 200px 80px 80px;
+    padding: 50px 50px 50px 50px;
     border: 2px solid white;
     color: var(--mainColor);
 }
@@ -343,6 +330,11 @@ li:first-child {
 .captain__says-inner {
     display: flex;
     flex-direction: column;
+}
+
+.captain__says-inner h2 {
+    font-size: 42px;
+    max-width: 600px;
 }
 
 .captain__says-inner {
@@ -361,37 +353,45 @@ li:first-child {
 
 .captain__says-footer {
     font-weight: 300;
-    font-size: 25px;
+    font-size: 33px;
     opacity: 0.85;
-    padding-top: 20px;
-    max-width: 600px;
+    padding-top: 10px;
+    max-width: 500px;
 }
 
 .reverse__text {
     writing-mode: vertical-lr;
-    color: var(--mainColor);
     display: flex;
     font-size: 98px;
+    max-width: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
-    line-height: 100%;
 }
 
 .button__captain {
     max-width: 200px;
     padding: 15px;
-    margin-top: 25px;
+    margin-top: 15px;
     font-size: 25px;
 }
 
 .captain__says-description img {
-    position: relative;
-    width: 50%;
+    position: absolute;
+    width: 70%;
 }
 
 .captain__says-description {
+    position: relative;
+    left: 90%;
+    bottom: 75%;
     color: var(--mainColor);
     display: flex;
+}
+
+.captain__says-text {
+    position: relative;
+    top: 2450%;
+    left: 75%;
 }
 
 .captain__says-text > p {
@@ -403,6 +403,7 @@ li:first-child {
 }
 
 .captain__says-text > h2 {
+    position: absolute;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 37px;

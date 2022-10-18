@@ -78,140 +78,6 @@
 
 /* ------------------------------------------ */
 
-@media (max-width: 1024px) {
-    /* Основная страница */
-
-    .btn {
-        font-size: 20px;
-    }
-
-    .wrapper {
-        max-width: 950px;
-    }
-
-    main {
-        margin-top: 30px;
-    }
-
-    .thebestclub {
-        line-height: 210%;
-    }
-
-    .thebestclub > h1 {
-        font-size: 58px;
-    }
-
-    .thebestclub > h2 {
-        font-size: 26px;
-    }
-
-    .btn__description {
-        margin-top: 40px;
-        width: auto;
-        padding: 15px;
-    }
-
-    .description {
-        margin-top: 15px;
-        font-size: 21px;
-        width: 300px;
-    }
-
-    /* Слайдер */
-
-    .slider__section {
-        margin-top: 100px;
-        margin-bottom: 80px;
-    }
-
-    .slider__prev {
-        right: 93%;
-    }
-    
-    .slider__next {
-        left: 93%;
-    }
-
-    .button {
-        top: 30%;
-    }
-
-    /* История */
-
-    .about__wrapper {
-        margin: 0 auto;
-        max-width: 900px;
-    }
-
-    .about__header > h1 {
-        font-size: 58px;
-    }
-
-    .about__description {
-        font-size: 26px;
-    }
-
-    .button__about {
-        margin: 20px 0;
-        padding: 10px;
-        max-width: 120px;
-        width: auto;
-    }
-
-    /* Капитан */
-
-    .captain__says {
-        margin-top: 30px;
-        margin-bottom: 80px;
-        height: 900px;
-    }
-
-    .captain__says-wrapper {
-        max-width: 950px;
-    }
-
-    .captain__says-content {
-        padding: 20px 30px 0 20px;
-        height: 105%;
-    }
-
-    .captain__says-header { 
-        font-size: 15px;
-    }
-    
-    .captain__says-footer {
-        font-size: 22px;
-        max-width: 600px;
-    }
-    
-    .reverse__text {
-        max-width: 50%;
-        font-size: 86px;
-    }
-
-    .button__captain {
-        max-width: 200px;
-        margin-top: 25px;
-    }
-
-    .captain__says-image {
-        background: url(/img/Difrostt.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: 100% 10%;
-        min-height: 650px;
-        max-height: 650px;
-        min-width: 370px;
-        z-index: 2;
-    }
-
-    /* Подвал */
-
-    .footer__wrapper {
-        max-width: 900px;
-    }
-}
-
 @media (max-width: 767px) {
 
     /* Основная страница */
@@ -377,6 +243,10 @@
         justify-content: center;
     }
 
+    .description__header {
+        margin: 5px 0;
+    }
+
     .btn {
         font-size: 13px;
     }
@@ -437,7 +307,7 @@
     }
 
     .slider__section {
-        margin-top: 50px;
+        margin-top: 80px;
         margin-bottom: 80px;
     }
 
@@ -473,7 +343,7 @@
     }
 
     .button__about {
-        margin: 5px auto;
+        margin: 0 auto 30px auto;
         text-align: center;
         padding: 10px;
         max-width: 120px;
