@@ -41,6 +41,7 @@ const setButtonAnimation = () => {
     font-size: 30px;`
   }))
 }
+setButtonAnimation()
 
 // Анимация для бургер-меню
 
@@ -68,7 +69,25 @@ const setNavItemsOptions = () => {
 }
 setNavItemsOptions()
 
-setButtonAnimation()
+// Модальное окно
+
+const setModalWindow = () => {
+  const modalButton = document.querySelector('.btn__description')
+  const modalOverlay = document.querySelector('.modal__overlay')
+  const modalWindow = document.querySelector('.modal')
+
+  modalButton.addEventListener('click', () => {
+  modalOverlay.classList.add('modal__overlay-visible')
+  modalWindow.classList.add('modal__visible')
+
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target == modalOverlay) {
+        modalOverlay.classList.remove('modal__overlay-visible');
+      }
+      })
+})
+}
+setModalWindow()
 
 // Слайдер
 
@@ -87,6 +106,7 @@ const setSliderSettings = () => {
   })
 }
 setSliderSettings()
+
 window.addEventListener('resize', setSliderSettings)
 
 const rollSlider = () => {
