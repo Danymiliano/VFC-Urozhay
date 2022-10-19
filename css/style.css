@@ -58,6 +58,10 @@ body {
     max-width: 85%;
 }
 
+.burger {
+    display: none;
+}
+
 .description__header {
     background: var(--mainColor);
     background-size: cover;
@@ -72,7 +76,6 @@ body {
 .header__wrapper > a {
     display: flex;
     align-items: center;
-    
 }
 
 a > h1 {

@@ -19,7 +19,6 @@ const navAnimation = setNavAnimation = () => {
     })
   }) 
 }
-
 setNavAnimation()
 
 // Анимация для кнопки
@@ -42,6 +41,32 @@ const setButtonAnimation = () => {
     font-size: 30px;`
   }))
 }
+
+// Анимация для бургер-меню
+
+const burger = document.querySelector('.burger')
+const nav = document.querySelector('nav')
+const navItems = nav.querySelectorAll('a')
+
+const setBurgerMenuAnimation = () => {
+  burger.addEventListener('click', () => {
+    document.body.classList.toggle('stop__scroll')
+    burger.classList.toggle('burger__active')
+    nav.classList.toggle('nav__visible')
+  })
+}
+setBurgerMenuAnimation()
+
+const setNavItemsOptions = () => {
+  navItems.forEach(el => {
+    el.addEventListener('click', () => {
+  document.body.classList.remove('stop__scroll')
+  burger.classList.toggle('burger__active')
+  nav.classList.remove('nav__visible')
+    })
+  })
+}
+setNavItemsOptions()
 
 setButtonAnimation()
 
