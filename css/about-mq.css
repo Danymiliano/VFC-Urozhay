@@ -1,0 +1,147 @@
+@media (max-width: 1440px) {
+    
+    .first__player-description {
+        margin: 180px 20px 0 10px;
+    }
+    
+    .second__player-description img {
+        margin-top: 200px;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+    
+    .first__player {
+        display: flex;
+        background: url(/img/Background3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100% 100%;
+    }
+    
+    .first__player__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 40px 0px 40px 0;
+        width: 100%;
+    }
+    
+    .first__player-inner h2 {
+        font-size: 42px;
+    }
+    
+    .first__player-header {
+        font-size: 14px;
+
+    }
+    
+    .first__player-footer {
+        font-size: 25px;
+    }
+    
+    .fpreverse__text {
+        display: none;
+    }
+    
+    .first__player-description img {
+        min-width: 18vw;
+        min-height: 50vh;
+    }
+    
+    .first__player-description {
+        margin: 110px 20px 0 10px;
+    }
+    
+    .first__player-text > p {
+        font-size: 14px;
+    }
+    
+    .first__player-text > h2 {
+        font-size: 27px;
+    }
+    
+    /* Секция со вторым игроком */
+    
+    .second__player__wrapper {
+        display: flex;
+        max-width: 100%;
+        margin: 30px 30px 30px 30px;
+    }
+    
+    .second__player__content {
+        display: flex;
+        color: var(--mainColor);
+        max-height: 87%;
+        margin-left: 0;
+    }
+    
+    .second__player-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+    }
+    
+    .second__player-inner h2 {
+        font-size: 52px;
+        max-width: 700px;
+    }
+    
+    .second__player-inner {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .second__player-header {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        padding-bottom: 5px;
+        opacity: 0.85;
+    }
+    
+    .second__player-footer {
+        font-weight: 300;
+        font-size: 33px;
+        opacity: 0.85;
+        padding-top: 10px;
+        max-width: 1100px;
+    }
+    
+    .second__player-description img {
+        max-width: 50%;
+        margin-top: 50px;
+    }
+    
+    .second__player-card {
+        position: static;
+    }
+    
+    .second__player-description {
+        display: flex;
+        flex-direction: row;
+        color: var(--mainColor);
+    }
+    
+    .second__player-text {
+        margin-top: 530px;
+        margin-left: 50px;
+    }
+    
+    .second__player-text > p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        padding-bottom: 5px;
+        opacity: 0.85;
+    }
+    
+    .second__player-text > h2 {
+        position: static;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 37px;
+    }
+    
+}
