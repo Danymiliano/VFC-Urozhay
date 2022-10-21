@@ -21,29 +21,12 @@
 // }
 // setNavAnimation()
 
-// Анимация для кнопки
-
-const setButtonAnimation = () => {
-  const button = document.querySelector('.btn');
-  button.addEventListener('mouseover', () => {
-    button.style = `
-    transition: all 0.2s;
-    background-color: var(--mainColor);
-    color: var(--secondColor);
-    font-size: 30px;
-        `
-  },
-  button.addEventListener('mouseout', () => {
-    button.style = `
-    transition: all 0.2s;
-    background-color: transparent;
-    color: var(--mainColor);
-    font-size: 30px;`
-  }))
-}
-setButtonAnimation()
-
 // Анимация для бургер-меню
+
+AOS.init({
+  once: false,
+  offset: '100px',
+})
 
 const burger = document.querySelector('.burger')
 const nav = document.querySelector('nav')

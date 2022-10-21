@@ -9,6 +9,7 @@
     --secondColor: #110F0F;
     --urozhayColor: #4b9834;
     --darkColor: #F9F9F9;
+    --urozhayBrightColor: #73d655;
 }
 
 :focus {
@@ -37,8 +38,14 @@ body {
     color: var(--mainColor);
     font-size: 15px;
     padding: 30px;
-    border: 2px solid var(--mainColor);
+    border: 6px solid var(--mainColor);
     cursor: pointer;
+}
+
+.btn:hover {
+    transition: all 0.1s ease-in-out !important; 
+    background-color: var(--mainColor);
+    color: var(--secondColor);
 }
 
 .wrapper {
@@ -383,7 +390,6 @@ label {
     padding: 15px;
     font-size: 25px;
 }
-
 /* Капитан */
 
 .captain__says {

@@ -30,6 +30,11 @@
         max-width: 85%;
     }
 
+    .modal {
+        width: 340px;
+        height: 340px;
+    }
+
     .burger {
         position: relative;
         height: 20px;
@@ -195,6 +200,7 @@
     .button__container {
         display: flex;
         justify-content: center;
+        font-size: 12px;
     }
     
     .btn__description {

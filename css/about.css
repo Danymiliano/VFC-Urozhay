@@ -137,7 +137,7 @@
 }
 
 .second__player-description img {
-    max-width: 50%;
+    max-width: 70%;
     margin-top: 50px;
 }
 
@@ -154,7 +154,7 @@
 
 .second__player-text {
     margin-top: 530px;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .second__player-text > p {
@@ -171,4 +171,3 @@
     font-weight: 500;
     font-size: 37px;
 }
-
