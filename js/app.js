@@ -23,11 +23,6 @@
 
 // Анимация для бургер-меню
 
-AOS.init({
-  once: false,
-  offset: '100px',
-})
-
 const burger = document.querySelector('.burger')
 const nav = document.querySelector('nav')
 const navItems = nav.querySelectorAll('a')
@@ -74,41 +69,41 @@ setModalWindow()
 
 // Слайдер
 
-const images = document.querySelectorAll('.slider .slider__line img');
-const sliderLine = document.querySelector('.slider__line');
-let count = 0;
-let width;
+// const images = document.querySelectorAll('.slider .slider__line img');
+// const sliderLine = document.querySelector('.slider__line');
+// let count = 0;
+// let width;
 
-const setSliderSettings = () => {
-  console.log('resize');
-  width = document.querySelector('.slider').offsetWidth;
-  sliderLine.style.width = width * images.length + 'px';
-  images.forEach(item => {
-    item.style.width = width + 'px';
-    item.style.height ='auto';
-  })
-}
-setSliderSettings()
+// const setSliderSettings = () => {
+//   console.log('resize');
+//   width = document.querySelector('.slider').offsetWidth;
+//   sliderLine.style.width = width * images.length + 'px';
+//   images.forEach(item => {
+//     item.style.width = width + 'px';
+//     item.style.height ='auto';
+//   })
+// }
+// setSliderSettings()
 
-window.addEventListener('resize', setSliderSettings)
+// window.addEventListener('resize', setSliderSettings)
 
-const rollSlider = () => {
-  sliderLine.style.transform = 'translate(-'+ count * width +'px)';
- }
+// const rollSlider = () => {
+//   sliderLine.style.transform = 'translate(-'+ count * width +'px)';
+//  }
 
-document.querySelector('.slider__next').addEventListener('click', () => {
-  count++;
-  if (count >= images.length) {
-    count = 0;
-  }
-  rollSlider()
-})
+// document.querySelector('.slider__next').addEventListener('click', () => {
+//   count++;
+//   if (count >= images.length) {
+//     count = 0;
+//   }
+//   rollSlider()
+// })
 
-document.querySelector('.slider__prev').addEventListener('click', () => {
-  count--;
-  if (count < 0) {
-    count = images.length - 1;
-  }
-  rollSlider()
-})
+// document.querySelector('.slider__prev').addEventListener('click', () => {
+//   count--;
+//   if (count < 0) {
+//     count = images.length - 1;
+//   }
+//   rollSlider()
+// })
 

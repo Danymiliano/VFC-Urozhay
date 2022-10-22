@@ -1,5 +1,9 @@
 /* Секция с первым игроком */
 
+.body {
+    overflow: hidden;
+}
+
 .first__player {
     display: flex;
     background: url(/img/Background3.png);
@@ -139,6 +143,7 @@
 .second__player-description img {
     max-width: 70%;
     margin-top: 50px;
+    overflow-x: hidden;
 }
 
 .second__player-card {
@@ -171,3 +176,5 @@
     font-weight: 500;
     font-size: 37px;
 }
+
+/* Слайдер */

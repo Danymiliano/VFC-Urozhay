@@ -212,64 +212,7 @@
     
     /* Слайдеры */
     
-    .slider__section {
-        background: var(--secondColor);
-        background-size: cover;
-        padding: 50px 0;
-    }
-    
-    .slider__wrapper {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 0 auto;
-        width: 85%;
-    }
-    
-    .slider__wrapper > h1 {
-        display: flex;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        font-size: 58px;
-        font-family: 'Manrope', sans-serif;
-        font-weight: bolder;
-        line-height: 100%;
-        color: var(--mainColor);
-    }
-    
-    .slider {
-        position: relative;
-        min-width: 80%;
-        max-width: 80%;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-    
-    .slider__line {
-        display: flex;
-        transition: all ease 0.8s;
-    }
-    
-    .button {
-        position: absolute;
-        display: inline;
-        top: 25%;
-        font-size: 40px;
-        text-shadow: 2px 2px 5px var(--secondColor);
-        z-index: 99;
-        color: var(--mainColor);
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-    
-    .slider__prev {
-        right: 90%;
-    }
-    
-    .slider__next {
-        left: 90%;
-    }
+
     
     /* История */
     

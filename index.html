@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#4b9834">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700;800&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/">
@@ -16,7 +17,7 @@
     <link rel="manifest" href="favicon//site.webmanifest">
     <link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#4b9834">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/index-mq.css">
+    <link rel="stylesheet" href="/css/index/index-mq.css">
     <title>VFC Urozhay official page</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
             <ul>
                 <li><a href="/index.html" class="navLink mainpage">главная</a></li>
                 <li><a href="/about.html" class="navLink legends">истории</a></li>
-                <li><a href="/squad.html" class="navLink profile">состав</a></li>
+                <li><a href="/squad.html" class="navLink profile">о клубе</a></li>
             </ul>
         </nav>
         <button class="burger" aria-label="Открыть меню" aria-expanded="false">
@@ -36,27 +37,25 @@
     </div>
     </header>
     <section class="description__section">
+        <div class="modal__window">
+            <div class="modal__overlay">
+                <div class="modal">
+                    <form action="" name="" method="post" enctype="text/plain" class="form__main">
+                        <label for="username" class="label__main-first">Логин:</label>
+                        <input type="text" name="username" id="username" class="username__main" required>
+                        <label for="password" class="label__main-second">Пароль:</label>
+                        <input type="password" name="password" id="password" class="password__main" required>
+                        <button type="submit" class="form__submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="wrapper">
     <main class="description__content">
         <div class="thebestclub" data-aos="fade-right" data-aos-duration="2500">
             <h2 data-aos="fade-right" data-aos-duration="1500">Пожалуй, лучший клуб</h2>
         <h1 class=""><strong>Планеты<br/> Земля</strong></h1></div>
         <div class="button__container" data-aos="fade-left" data-aos-duration="2500"><button class="btn btn__description">Узнать</button>
-        
-            <div class="modal__window">
-                <div class="modal__overlay">
-                    <div class="modal">
-                        <form action="" name="" method="post" enctype="text/plain" class="form__main">
-                            <label for="username" class="label__main-first">Логин:</label>
-                            <input type="text" name="username" id="username" class="username__main" required>
-                            <label for="password" class="label__main-second">Пароль:</label>
-                            <input type="password" name="password" id="password" class="password__main" required>
-                            <button type="submit" class="form__submit">Войти</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <div class="content__container" data-aos="fade-left" data-aos-duration="2500">
         <div class="description">Прикоснитесь к прекрасному — познакомьтесь поближе с нашей командой</div>
@@ -65,18 +64,26 @@
 </div>
 </section>
 <section class="slider__section">
-    <div class="slider__wrapper">
-    <h1>Лучшие моменты</h1>
-        <div class="slider">
-            <button class="button slider__prev">&#171;</button>
-        <button class="button slider__next">&#187;</button>
-            <div class="slider__line">
-                <img src="/slider-images/1.png" alt="Урожай с кубком">
-                <img src="/slider-images/2.png" alt="Урожай в сборе">
-                <img src="/slider-images/3.png" alt="Урожай празднует">
-            </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide image-slide"><img src="/slider-images/BestAssistant.png" alt=""></div>
+          <div class="swiper-slide image-slide"><img src="/slider-images/DanymilianoSecondDivision.jpg" alt=""></div>
+          <div class="swiper-slide image-slide"><img src="/slider-images/SecondDivisionBestTeam.jpg" alt=""></div>
+          <div class="swiper-slide image-slide"><img src="/slider-images/UrozhaySquad.png" alt=""></div>
         </div>
-    </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide image-slide"><img src="/slider-images/BestAssistant.png" alt=""></div>
+          <div class="swiper-slide image-slide"><img src="/slider-images/DanymilianoSecondDivision.jpg" alt=""></div>
+          <div class="swiper-slide image-slide"><img src="/slider-images/SecondDivisionBestTeam.jpg" alt=""></div>
+          <div class="swiper-slide image-slide"><img src="/slider-images/UrozhaySquad.png" alt=""></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
 </section>   
 <section class="about__club">
     <div class="about__wrapper">
@@ -99,27 +106,27 @@
             <span data-aos="fade-left" data-aos-delay="500" data-aos-duration="1500"></span>
         </div>
     </div>  
-    <button class="btn button__about" data-aos="fade-up" data-aos-duration="1500">Читать</button>
+    <a href="/squad.html" class="btn button__about" data-aos="fade-up" data-aos-duration="1500">Читать</a>
 </div>
 </section>
 <section class="captain__says">
     <div class="captain__says-wrapper">
     <div class="captain__says-content">
-        <h1 class="reverse__text">В этом месяце</h1>
+        <h1 class="reverse__text">В этом сезоне</h1>
         <article class="captain__says-inner">
         <p class="captain__says-header" data-aos="fade-right" data-aos-duration="2000">Капитан рассказывает:</p>
-        <h2 data-aos="fade-right" data-aos-duration="1700">И так продолжилось бла-бла-бла...</h2>
-        <p class="captain__says-footer" data-aos="fade-right" data-aos-duration="2000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eos in, iste aliquam blanditiis laudantium rem nobis, nisi consequuntur quia sint? Fugiat numquam praesentium cumque delectus, libero velit labore sequi!
-        Ipsum, tenetur at. Quae, ducimus molestias. Odio minus, quae eos neque minima aspernatur velit et ad enim tempore accusamus reiciendis sit commodi voluptas voluptatibus ipsam a quam id dolor doloribus?
+        <h2 data-aos="fade-right" data-aos-duration="1700">Об итогах 25-го сезона во Втором дивизионе</h2>
+        <p class="captain__says-footer" data-aos="fade-right" data-aos-duration="2000">
+        Сезон вышел очень интересным, было множество ярких и запоминающихся матчей, каждый соперник бился до самой последней секунды. Мы получили не только множество эмоций, но и бесценный опыт. Ошибки или недочеты, которые совершили по ходу сезона, послужат нам бесценным опытом. Огромная благодарность не только игрокам команды Урожай, но и всем тем кто поддерживает честную игру.
         </p>
         <div class="captain__says-description">
-            <img class="" src="/img/Difrostt.png" alt="" data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000">
+            <img class="" src="/img/Difrostt.png" alt="Капитан" data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000">
             <div class="captain__says-text" data-aos="fade-left" data-aos-delay="500" data-aos-duration="3000">
             <p>Капитан</p>
             <h2>Дмитрий<br/>«Difrostt»</h2>
         </div>
         </div>
-        <button class="btn button__captain" data-aos="fade-up" data-aos-duration="1500">Читать</button>
+        <a href="/about.html" class="btn button__captain" data-aos="fade-up" data-aos-duration="1500">Читать</a>
     </article>
     </div>
 </div>
@@ -144,7 +151,10 @@
     </div>
 </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="/js/swiper.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/js/aos.js"></script>
 <script src="/js/app.js"></script>
 </body>
 </html>
