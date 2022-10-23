@@ -472,6 +472,7 @@ label {
 
 footer {
     background-color: var(--darkColor);
+    color: var(--secondColor);
 }
 
 .footer__wrapper {
