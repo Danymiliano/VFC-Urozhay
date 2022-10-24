@@ -97,13 +97,6 @@ a > h1 {
     font-weight: 400;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    margin-top: 90px;
-    font-weight: 300;
-}
-
 .modal__overlay {
     display: flex;
     align-items: center;
@@ -149,6 +142,10 @@ main {
 
 .thebestclub {
     line-height: 410%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    font-weight: 300;
 }
 
 .thebestclub > h1 {

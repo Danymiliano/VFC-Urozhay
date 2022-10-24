@@ -1,0 +1,73 @@
+/* Первая секция */
+
+.find__wrapper {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.find__text {
+    color: var(--mainColor);
+}
+.find__header {
+    font-size: 70px;
+    max-width: 60%;
+    color: var(--mainColor);
+    margin-bottom: 250px;
+}
+
+.decoration__block {
+    display: block;
+    height: 260px;
+    width: 100vh;
+    border: 8px solid var(--mainColor);
+    margin-bottom: 30px;
+}
+
+.decoration__block img {
+    position: relative;
+    top: -115%;
+    left: -5%;
+}
+
+.find__text__wrapper {
+    position: relative;
+    max-width: 30%;
+    bottom: 207%;
+    left: 67%;
+}
+
+.find__text__wrapper:first-child {
+    font-size: 20px;
+}
+
+.find__text__wrapper:last-child {
+    font-size: 25px;
+}
+
+.decor__squares {
+    display: flex;
+    position: relative;
+    left: 65%;
+    top: -30%;
+}
+
+.next__decor__squares {
+    display: flex;
+    position: relative;
+    left: 65%;
+    top: -25%;
+}
+
+.next__decor__squares span {
+    height: 15px;
+    width: 15px;
+    background-color: var(--mainColor);
+    margin-left: 15px;
+}
+
+.decor__squares span {
+    height: 15px;
+    width: 15px;
+    background-color: var(--mainColor);
+    margin-left: 15px;
+}
