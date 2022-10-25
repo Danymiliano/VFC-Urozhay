@@ -48,6 +48,10 @@ body {
     color: var(--secondColor);
 }
 
+.general__wrapper {
+    width: 100%;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;

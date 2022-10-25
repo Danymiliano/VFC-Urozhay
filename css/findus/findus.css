@@ -71,3 +71,23 @@
     background-color: var(--mainColor);
     margin-left: 15px;
 }
+
+/* Форма регистрации */
+
+.reg {
+    display: flex;
+    flex-direction: column;
+    color: var(--mainColor);
+    margin: 0 auto;
+}
+
+.registration__field {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: var(--mainColor);
+}
+
+.error {
+    color: red;
+}

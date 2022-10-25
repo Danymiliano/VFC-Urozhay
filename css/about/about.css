@@ -295,17 +295,17 @@
     margin-right: 50px;
 }
 
-.decoration p {
+.decoration p, h2 {
     margin: 0;
     text-align: center;
 }
 
-.decoration__text > p:first-child {
+.decoration__text > h2 {
     padding-bottom: 20px;
     font-size: 32px;
 }
 
-.decoration__text > p:last-child {
+.decoration__text > p {
     padding-bottom: 40px;
     font-size: 21px;
 }

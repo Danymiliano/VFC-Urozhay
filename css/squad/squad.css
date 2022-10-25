@@ -1,5 +1,9 @@
 /* Первый блок */
 
+.general__wrapper {
+    max-width: 100%;
+}
+
 .wrapper__overall {
     margin: 0 auto;
     width: 70%;
