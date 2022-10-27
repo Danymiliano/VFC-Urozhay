@@ -1,331 +1,54 @@
-@media (max-width: 1890px) {
-/* Первый блок */
+@media (max-width: 1440px) {
 
-.wrapper__overall {
-    margin: 0 auto;
-    width: 70%;
-}
+    .second__filler__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
 
-.content__overall {
-    display: flex;
-    flex-direction: column;
-    padding-left: 66px; 
-    padding-top: 20px; 
-}
+    .quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
 
-.content__overall > h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 35px;
-    max-width: 700px;
-    padding-bottom: 5px;
-}
+    .quote img {
+        text-align: center;
+        margin: 0 auto;
+        width: 65px;
+    }
 
-.content__overall > h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 35px;
-    max-width: 500px;
-}
+    .quote > h2 {
+        text-align: center;
+        font-size: 26px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
 
-.decoration__wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 150px;
-    margin-bottom: 150px;
-}
+    .third__filler__wrapper {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-.decoration__block {
-    display: block;
-    height: 260px;
-    width: 63px;
-    border: 8px solid var(--mainColor);
-}
+    .third__filler__wrapper img {
+        width: 400px;
+        height: 500px;
+        margin: 0 auto;
+    }
 
-.heart__decoration__wrapper {
-    display: flex;
-    padding-top: 35px;
-}
+    .third__filler__text {
+        margin: 0;
+        max-width: 100%;
+    }
 
-.heart__decoration__wrapper > p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 24px;
-    color: var(--mainColor);
-}
-
-.heart__decoration__wrapper > .heart__overall {
-    width: 3.5%;
-    height: 10.5%;
-    margin-right: 10px;
-}
-
-.decoration__block, h2, h1 {
-    color: var(--mainColor);
-}
-
-/* Филлер */
-
-.filler__wrapper {
-    display: flex;
-    margin: 0 auto;
-    max-width: 85%;
-}
-
-.filler__desc {
-    display: flex;
-    flex-direction: column;
-}
-
-.filler__author {
-    writing-mode: vertical-lr;
-    font-size: 20px;
-    padding-left: 80px;
-}
-
-.filler__desc, p {
-    color: var(--mainColor);
-    font-size: 26px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    padding-bottom: 40px;
-}
-
-.background__image {
-    display: flex;
-    margin: 0 auto;
-    max-width: 85%;
-}
-
-.background__image img {
-    width: 100%;
-}
-
-/* Второй филлер */
-
-.second__filler__wrapper {
-    display: flex;
-    margin: 0 auto;
-    max-width: 85%;
-}
-
-.second__filler__content {
-    display: flex;
-    margin-top: 50px;
-}
-
-.filler__text {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-}
-
-.filler__squares {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-.filler__squares span {
-    display: flex;
-    width: 15px;
-    height: 15px;
-    margin-left: 15px;
-    background-color: var(--mainColor);
-}
-
-.quote {
-    text-align: center;
-    max-width: 30%;
-    margin-right: 80px;
-    margin-top: 100px;
-}
-
-.quote p {
-    font-weight: 600;
-    font-size: 40px;
-}
-
-.quote img {
-    width: 35%;
-}
-
-.filler__squares span:first-child {
-    margin-left: 0;
-}
-
-/* Третья секция с филлером */
-
-.third__filler__wrapper {
-    display: flex;
-    margin: 0 auto;
-    max-width: 85%;
-}
-
-.third__filler__text {
-    margin-left: 50px;
-    max-width: 50%;
-}
-
-.third__filler__text p {
-    margin-top: 20px;
-}
-
-.third__filler__wrapper img {
-    max-width: 50%;
-}
-
-/* Галерея */
-
-.gallery {
-    margin-top: 50px;
-}
-
-.gallery__wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 85%;
-}
-
-
-/* Лайк и поделиться  */
-
-.link__and__share {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.like__and__share__wrapper {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    max-width: 85%;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.like__and__share__wrapper img {
-    margin-right: 50px;
-    margin-bottom: 35px;
-}
-
-.like {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.share {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Секция с комментариями */
-
-.comment__wrapper {
-    display: flex;
-    flex-direction: column;
-    background: url(/img/Backcomment.png);
-    margin: 0 auto;
-    max-width: 85%;
-    justify-content: center;
-}
-
-.form__place {
-    position: relative;
-    top: -45%;
-    left: 2%;
-}
-
-.comment {
-    margin: 0 auto;
-    background-color: var(--mainColor);
-    margin-top: 20px;
-    width: 80vh;
-    height: 30vh;
-    border-radius: 30px;
-}
-
-.avatar img {
-    position: relative;
-    left: 5%;
-    top: 2vh;
-    border-radius: 50%;
-    max-width: 10%;
-    max-height: 10%;
-}
-
-.your__name {
-    font-size: 18px;
-    outline: none;
-    border: none;
-    background-color: var(--mainColor);
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-.your__name[type="text"] {
-    padding-left: 15px;
-}
-
-.comment__here {
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgba(168, 166, 166, 0.1);
-    font-size: 15px;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-    resize: none;
-    padding: 15px 15px 15px;
-}
-
-.time {
-    position: relative;
-    bottom: 14%;
-    left: 5%;
-}
-
-.how__actual {
-    position: relative;
-    font-size: 15px;
-    font-weight: 500;
-    bottom: 24.2%;
-    left: 10%;
-    color: var(--secondColor);
-}
-
-.many__likes {
-    position: relative;
-    bottom: 70.5%;
-    left: 60%;
-    font-size: 20px;
-    color: var(--secondColor);
-}
-
-.count {
-    position: relative;
-    bottom: 47%;
-    left: 56%;
-    color: var(--secondColor);
-}
-
-.to__answer {
-    position: absolute;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    bottom: -86%;
-    left: 95%;
-    font-size: 20px;
-    width: 20px;
-    background-color: var(--mainColor);
-    border: none;
-}
-
-.second {
-    margin-bottom: 20px;
-}
+    .third__filler__squares {
+        display: block;
+    }
 }

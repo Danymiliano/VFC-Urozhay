@@ -179,6 +179,10 @@
     max-width: 50%;
 }
 
+.third__filler__squares {
+    display: none;
+}
+
 /* Галерея */
 
 .gallery {
