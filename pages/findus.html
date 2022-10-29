@@ -14,11 +14,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
-    <link rel="stylesheet" href="/css/headerandfooter/headerandfooter.css">
-    <link rel="stylesheet" href="/css/headerandfooter/headerandfooter-mq.css">
-    <link rel="stylesheet" href="/css/registration/registration.css">
+    <link rel="stylesheet" href="/css/findus/findus.css">
     <link rel="manifest" href="favicon//site.webmanifest">
     <link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#4b9834">
+    <link rel="stylesheet" href="/css/headerandfooter/headerandfooter.css">
+    <link rel="stylesheet" href="/css/headerandfooter/headerandfooter-mq.css">
     <title>VFC Urozhay official page</title>
 </head>
 <body>
@@ -248,10 +248,10 @@
         </svg><h1>VFC Urozhay</h1></a>
         <nav>
             <ul>
-                <li><a href="/index.html" class="navLink mainpage">главная</a></li>
-                <li><a href="/about.html" class="navLink legends">истории</a></li>
-                <li><a href="/findus.html" class="navLink profile">найдите</a></li>
-                <li><a href="/squad.html" class="navLink profile">состав</a></li>
+                <li><a href="/pages/index.html" class="navLink mainpage">главная</a></li>
+                <li><a href="/pages/about.html" class="navLink legends">истории</a></li>
+                <li><a href="/pages/findus.html" class="navLink profile">найдите</a></li>
+                <li><a href="/pages/squad.html" class="navLink profile">состав</a></li>
             </ul>
         </nav>
         <button class="burger" aria-label="Открыть меню" aria-expanded="false">
@@ -260,35 +260,66 @@
     </div>
     </header>
     <main>
-    <section class="sign__up">
-        <div class="welcome">
-            <h1>Добро пожаловать на официальную страницу VFC Urozhay!</h1>
-            <p>Создайте учётную запись и наслаждайтесь великой историей виртуального футбольного клуба Урожай. На нашем сайте Вы сможете окунуться с головой в те самые легендарные события, за которые и любят наш клуб.</p>
-        </div>
-        <div class="sign__up-form">
-            <form action="" method="post" name="registrationForm" class="registration__form">
-                <div class="form__group">
-                    <label for="login">Логин:<sup class="field__required">*</sup></label>
-                    <input type="text" id="login" name="login" pattern="^[a-zA-Z][a-zA-Z0-9_\.]{5,19}$" required>
+    <section class="find__someone">'
+            <div class="find__wrapper">
+            <h1 class="find__header">Тут будет большой заголовок</h1>
+            <div class="decoration__block">
+                <div class="decor__squares">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="form__group">
-                <label for="email">E-mail:<sup class="field__required">*</sup></label>
-                <input type="email" id="email" name="email" pattern="^[_a-z0-9-\-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$" required>
+                <div class="next__decor__squares">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <img src="/img/FindUs/RandomPhoto.png" alt="Рандомное фото">
+                <aside class="find__text__wrapper">
+                <p class="find__text">Действующий человек на какой-то должности</p>
+                <strong><p class="find__text">Имя Фамилия Отчество</p></strong>
+            </aside>
             </div>
-                <div class="form__group">
-                    <label for="pswd">Пароль:<sup class="field__required">*</sup></label>
-                    <input type="password" id="pswd" name="pswd" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                </div>
-                <div class="form__group">
-                    <label for="pswdRepeat">Пароль ещё раз:<sup class="field__required">*</sup></label>
-                    <input type="password" id="pswdRepeat" name="pswdRepeat" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                </div>
-                <div class="form__group">
-                    <input type="checkbox" id="showPswd" name="showPswd">
-                    <label for="showPswd" class="show__pswd">Показать пароль</label>
-                </div>
-            </form>
-        </div>
+        </div>      
+    </section>
+    <section class="reg">
+        <form action="" method="post" name="registrationForm" class="registration__form">
+            <div class="form__group">
+                <label for="firstName">Имя:<sup class="field__required">*</sup></label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form__group">
+                <label for="lastName">Фамилия: </label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+            <div class="form__group">
+                <label for="login">Логин:<sup class="field__required">*</sup></label>
+                <input type="text" id="login" name="login" pattern="^[a-zA-Z][a-zA-Z0-9_\.]{5,19}$" required>
+            </div>
+            <div class="form__group">
+                <label for="phone">Телефон:<sup class="field__required">*</sup></label>
+                <input type="tel" id="phone" name="phone" class="phone" required>
+            </div>
+            <label for="email">E-mail:<sup class="field__required">*</sup></label>
+            <input type="email" id="email" name="email" pattern="^[_a-z0-9-\-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$" required>
+        </form>
+        <fieldset class="registration__field">
+            <div class="form__group">
+                <label for="pswd">Пароль:<sup class="field-required">*</sup></label>
+                <input type="password" id="pswd" name="pswd" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+            </div>
+            <div class="form__group">
+                <label for="pswdRepeat">Повтор пароля:<sup class="field__required">*</sup></label>
+                <input type="password" id="pswdRepeat" name="pswdRepeat" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+            </div>
+            <div class="form__group">
+                <input type="checkbox" id="showPswd" name="showPswd">
+                <label for="showPswd" class="show__pswd">Показать пароль</label>
+            </div>
+        </fieldset>
     </section>
 </main>
     <footer>
@@ -311,5 +342,9 @@
             </div>
         </div>
         </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="/js/registrationForm.js"></script>
 </body>
 </html>
