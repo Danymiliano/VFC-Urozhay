@@ -91,3 +91,135 @@
 .error {
     color: red;
 }
+
+/* Делаем посты */
+
+.send__posts {
+    margin: 50px 0;
+}
+
+.post-wrapper {
+    display: flex;
+    margin: 0 auto;
+    color: var(--mainColor);
+    width: 85%;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-and-author {
+    display: flex;
+}
+
+.name-of-post {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 10px 0;
+}
+
+.author-of-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-of-post_input {
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 200px;
+    height: 30px;
+}
+
+.name-of-post_input[placeholder] {
+    font-family: inherit;
+    padding-left: 5px;
+}
+
+.author-of-post_input {
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 200px;
+    height: 30px;
+}
+
+.author-of-post_input[placeholder] {
+    font-family: inherit;
+    padding-left: 5px;
+}
+
+.post-textarea {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.post-textarea_inner {
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+}
+
+.post-textarea_inner[placeholder] {
+    font-family: inherit;
+    padding: 5px 0 0 3px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.send-button {
+    font-family: inherit;
+    display: block;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 15px;
+    background-color: var(--mainColor);
+}
+
+.send-button:hover {
+    transition: all 0.05s ease-in-out;
+    color: var(--mainColor);
+    background-color: var(--urozhayColor);
+}
+
+/* Ответы с формы */
+
+.post-background_wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--mainColor);
+    width: 85%;
+}
+
+.post-background {
+    width: fit-content;
+    min-width: 500px;
+    height: fit-content;
+    min-height: 100px;
+    border-radius: 3px;
+    background-color: rgb(146, 192, 160);
+    margin-top: 20px;
+}
+
+.post-header {
+    padding: 20px 0 10px 10px;
+}
+
+.post-text {
+    padding: 10px 20px 10px 10px;
+}
+
+.post-date-and-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 20px 10px;
+    font-size: 20px;
+}

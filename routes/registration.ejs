@@ -30,7 +30,7 @@
             <p>Создайте учётную запись и наслаждайтесь великой историей виртуального футбольного клуба Урожай. На нашем сайте Вы сможете окунуться с головой в те самые легендарные события, за которые и любят наш клуб.</p>
         </div>
         <div class="sign__up-form">
-            <form action="" method="post" name="registrationForm" class="registration__form">
+            <form action="/registration" method="post" name="registrationForm" class="registration__form" id="post__form">
                 <div class="form__group">
                     <label for="login">Логин:<sup class="field__required">*</sup></label>
                     <input type="text" id="login" name="login" pattern="^[a-zA-Z][a-zA-Z0-9_\.]{5,19}$" required>
@@ -51,6 +51,7 @@
                     <input type="checkbox" id="showPswd" name="showPswd">
                     <label for="showPswd" class="show__pswd">Показать пароль</label>
                 </div>
+                <button>Отправить</button>
             </form>
         </div>
     </section>

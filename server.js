@@ -4,16 +4,16 @@ const path = require('path');
 
 const app = express();
 
-// Добавляем шаблонизатор ejs
+// Шаблонизатор ejs (работает как мидлвар также)
 
 app.set('view engine', 'ejs');
 
 const PORT = 3000;
 const HOST = 'localhost';
 
-// Функция для установки путей к файлам
+// Функция установки путей к файлам
 
-const setPath = (page) => path.resolve(__dirname, 'ejs', `${page}.ejs`)
+const setPath = (page) => path.resolve(__dirname, 'routes', `${page}.ejs`)
 
 app.listen(PORT, HOST, (error) => {
     if (error) {
@@ -25,11 +25,15 @@ app.listen(PORT, HOST, (error) => {
 
 // Мидлвар с добавлением исключения для всего в папке
 
-app.use(express.static('./'))
+app.use(express.static('./'));
 
 // Мидлвар с логгером
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
+
+// Мидлвар с парсингом
+
+app.use(express.urlencoded({ extended: false }))
 
 // Роутинг страниц
 
@@ -48,9 +52,30 @@ app.get('/about', (req, res) => {
     res.render(setPath('about'), { title })
 })
 
+// По методу post запрашиваем данные и 
+// отправляем данные с запроса обратно
+
+app.post('/findus', (req, res) => {
+    const { title, author, text } = req.body;
+    const post = {
+        date: Date(),
+        title,
+        author,
+        text,
+    }
+    res.render(setPath('findus'), { post, title })
+})
+
 app.get('/findus', (req, res) => {
-    const title = 'Findus'
-    res.render(setPath('findus'), { title })
+    const title = 'Find us'
+    const post = {
+        id: '1',
+        text: 'Тут какой-то текст',
+        title: 'Заголовок',
+        date: '05.09.2022',
+        author: 'Максим',
+    }
+    res.render(setPath('findus'), { title, post })
 });
 
 app.get('/registration', (req, res) => {
