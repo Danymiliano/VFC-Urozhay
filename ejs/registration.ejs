@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#4b9834">
+    <meta name="theme-color" content="#4b9834">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700;800&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
+    <link rel="stylesheet" href="/css/headerandfooter/headerandfooter.css">
+    <link rel="stylesheet" href="/css/headerandfooter/headerandfooter-mq.css">
+    <link rel="stylesheet" href="/css/registration/registration.css">
+    <link rel="manifest" href="favicon//site.webmanifest">
+    <link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#4b9834">
+    <title>VFC Urozhay official page | <%= title %></title>
+</head>
+<body>
+    <%- include('./components/header.ejs') %>
+    <main>
+    <section class="sign__up">
+        <div class="welcome">
+            <h1>Добро пожаловать на официальную страницу VFC Urozhay!</h1>
+            <p>Создайте учётную запись и наслаждайтесь великой историей виртуального футбольного клуба Урожай. На нашем сайте Вы сможете окунуться с головой в те самые легендарные события, за которые и любят наш клуб.</p>
+        </div>
+        <div class="sign__up-form">
+            <form action="" method="post" name="registrationForm" class="registration__form">
+                <div class="form__group">
+                    <label for="login">Логин:<sup class="field__required">*</sup></label>
+                    <input type="text" id="login" name="login" pattern="^[a-zA-Z][a-zA-Z0-9_\.]{5,19}$" required>
+                </div>
+                <div class="form__group">
+                <label for="email">E-mail:<sup class="field__required">*</sup></label>
+                <input type="email" id="email" name="email" pattern="^[_a-z0-9-\-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$" required>
+            </div>
+                <div class="form__group">
+                    <label for="pswd">Пароль:<sup class="field__required">*</sup></label>
+                    <input type="password" id="pswd" name="pswd" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                </div>
+                <div class="form__group">
+                    <label for="pswdRepeat">Пароль ещё раз:<sup class="field__required">*</sup></label>
+                    <input type="password" id="pswdRepeat" name="pswdRepeat" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                </div>
+                <div class="form__group">
+                    <input type="checkbox" id="showPswd" name="showPswd">
+                    <label for="showPswd" class="show__pswd">Показать пароль</label>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+<%- include('./components/footer.ejs') %>
+</body>
+</html>

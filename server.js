@@ -1,85 +1,72 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
+const morgan = require('morgan')
 const path = require('path');
+
+const app = express();
+
+// Добавляем шаблонизатор ejs
+
+app.set('view engine', 'ejs');
 
 const PORT = 3000;
 const HOST = 'localhost';
 
-// Создание локального сервера
-const server = http.createServer((req, res) => {
-    console.log('Server request');
+// Функция для установки путей к файлам
 
-    res.setHeader('Content-Type', 'text/html');
+const setPath = (page) => path.resolve(__dirname, 'ejs', `${page}.ejs`)
 
-    const setPath = (page) => {
-        path.resolve(__dirname, 'pages', `${page}.html`);
-    }
-
-    let basePath = '';
-
-    switch (req.url) {
-        case '/':
-            basePath = setPath('index');
-            break;
-        case '/index':
-            basePath = setPath('index');
-            break;
-        case '/about':
-            basePath = setPath('about');
-            break;
-        case '/squad':
-            basePath = setPath('squad');
-            break;
-        case '/findus':
-            basePath = setPath('findus');
-            break;
-        case '/registration':
-            basePath = setPath('registration');
-        default:
-            basePath = setPath('404');
-            break;
-    }
-
-    fs.readFile(basePath, (error, data) => {
-        if (error) {
-            console.log(error);
-            res.end();
-        } else {
-            res.write(data);
-            res.end();
-        }
-    })
-
-});
-
-// Прослушивание локального сервера
-server.listen(PORT, HOST, () => {
-    try {
-        console.log(`Сервер успешно завёлся по адресу: ${HOST}:${PORT}`);
-    } catch (error) {
+app.listen(PORT, HOST, (error) => {
+    if (error) {
         console.log(error);
+    } else {
+        console.log(`Listening port: ${PORT}`);
     }
 })
 
+// Мидлвар с добавлением исключения для всего в папке
 
+app.use(express.static('./'))
 
+// Мидлвар с логгером
 
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 
+// Роутинг страниц
 
+app.get('/', (req, res) => {
+    const title = 'Home'
+    res.render(setPath('index'), { title })
+})
 
+app.get('/index', (req, res) => {
+    const title = 'Home'
+    res.render(setPath('index'), { title })
+})
 
+app.get('/about', (req, res) => {
+    const title = 'About'
+    res.render(setPath('about'), { title })
+})
 
+app.get('/findus', (req, res) => {
+    const title = 'Findus'
+    res.render(setPath('findus'), { title })
+});
 
+app.get('/registration', (req, res) => {
+    const title = 'Registration'
+    res.render(setPath('registration'), { title })
+})
 
+app.get('/squad', (req, res) => {
+    const title = 'Squad'
+    res.render(setPath('squad'), { title })
+})
 
+// Мидлвар с отловом ошибок в адресе
 
-
-// fs.readFile('./pages/index.html', (error, data) => {
-//     if (error) {
-//         console.log(error);
-//         res.end()
-//     } else {
-//         res.write(data);
-//         res.end();
-//     }
-// })
+app.use((req, res) => {
+    const title = '404'
+    res.status(404);
+    res.render(setPath('404'), { title });
+})
