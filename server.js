@@ -1,6 +1,8 @@
 const express = require('express');
 const morgan = require('morgan')
 const path = require('path');
+const mongoose = require('mongoose');
+const Post = require('./models/post')
 
 const app = express();
 
@@ -10,10 +12,13 @@ app.set('view engine', 'ejs');
 
 const PORT = 3000;
 const HOST = 'localhost';
+const db = 'mongodb://localhost:27017';
+
+
 
 // Функция установки путей к файлам
 
-const setPath = (page) => path.resolve(__dirname, 'routes', `${page}.ejs`)
+const setPath = (page) => path.resolve(__dirname, 'views', `${page}.ejs`)
 
 app.listen(PORT, HOST, (error) => {
     if (error) {
