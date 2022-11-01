@@ -2,7 +2,8 @@ const express = require('express');
 const morgan = require('morgan')
 const path = require('path');
 const mongoose = require('mongoose');
-const Post = require('./models/post')
+const Post = require('./models/post');
+const token = require('./token/token')
 
 const app = express();
 
@@ -10,11 +11,29 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const HOST = 'localhost';
-const db = 'mongodb://localhost:27017';
+const db = `mongodb+srv://Danymiliano:${token}@VFC-Urozhay.5tl0qwi.mongodb.net/news?retryWrites=true&w=majority`;
 
+async function connectToDatabase() {
+    try {
+        await mongoose.connect(db, {
+            useNewUrlParser: true,
+        })
+        console.log('Успешно законнектились к базе данных');
+    } catch (error) {
+        console.log(error);
+    }
+}
+connectToDatabase()
 
+// const post = {
+//     date: Date(),
+//     title,
+//     author,
+//     text,
+// }
+// res.render(setPath('findus'), { post, title })
 
 // Функция установки путей к файлам
 
@@ -24,7 +43,7 @@ app.listen(PORT, HOST, (error) => {
     if (error) {
         console.log(error);
     } else {
-        console.log(`Listening port: ${PORT}`);
+        console.log(`Прослушиваемый порт: ${PORT}`);
     }
 })
 
@@ -62,13 +81,23 @@ app.get('/about', (req, res) => {
 
 app.post('/findus', (req, res) => {
     const { title, author, text } = req.body;
-    const post = {
-        date: Date(),
-        title,
-        author,
-        text,
+    const post = new Post({ title, author, text, });
+    let result;
+    async function getNewPost () {
+        try {
+            await post.save()
+            await res.send(result)
+        } catch (error) {
+            console.log(error);
+            res.render(setPath('404'), { title: 'Error'})
+        }
     }
-    res.render(setPath('findus'), { post, title })
+    getNewPost()
+    res.render(setPath('findus'), { title, post, result })
+})
+
+app.get('/findus/:id', (req, res) => {
+    res.render(setPath('post'))
 })
 
 app.get('/findus', (req, res) => {
@@ -76,7 +105,7 @@ app.get('/findus', (req, res) => {
     const post = {
         id: '1',
         text: 'Тут какой-то текст',
-        title: 'Заголовок',
+        title: 'Заголовок dddddd',
         date: '05.09.2022',
         author: 'Максим',
     }
