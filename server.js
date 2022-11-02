@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan')
 const mongoose = require('mongoose');
-require('dotenv').config()
 const methodOverride = require('method-override')
 const setPath = require('./helpers/set-path')
 const postRoutes = require('./routes/post-routes')
@@ -10,9 +9,9 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 const HOST = 'localhost';
-const db = process.env.MONGO_URL
+const db = 'mongodb+srv://Danymiliano:3UE-9EB-bUc-TSQ@VFC-Urozhay.5tl0qwi.mongodb.net/posts?retryWrites=true&w=majority'
 
 mongoose
     .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
