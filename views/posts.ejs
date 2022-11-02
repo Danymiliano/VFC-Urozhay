@@ -25,39 +25,40 @@
 <body>
     <%- include('./components/header.ejs') %>
     <main>
-    <section class="send__posts">
-    <ul>
+    <ul class="posts">
+        <% if (posts.length) { %>
+            <% posts.forEach(({ id, title, date, text, author, createdAt }) => { %>
         <li>  
     <article class="post-background_wrapper">
     <article class="post-background">
-        <h2 class="post-header"><a href=""><%= post.title %></a></h2>
-        <p class="post-text"><%= post.text || 'No text' %></p>
+        <h2 class="post-header"><a href="/posts/<%= id %>"><%= title %></a></h2>
+        <p class="post-text"><%= text %></p>
         <div class="post-date-and-name">
-            <p class="post-date"><strong><%= post.createdAt.toLocaleDateString() || 'No date' %></strong></p>
-            <p class="post-name"><strong><%= post.author %></strong></p>
+            <p class="post-date"><strong><%= createdAt.toLocaleDateString() %></strong></p>
+            <p class="post-name"><strong><%= author %></strong></p>
         </div>
-        <a href="/edit/<%= post.id %>" class="btn-edit"></a>
-        <i class="fas fa-edit"></i>
-        <i class="fas fa-trash-alt" data-id="<%= post.id %>"></i>
-        <button class="btn-delete" data-id="<%= post.id %>"></button>
+        <i class="fas fa-trash-alt" data-id="<%= id %>"></i>
+        <button class="btn-delete" data-id="<%= id %>"></button>
     </article>
     </div>
 </li>
+<% }) %>
+<% } %>
 </ul>
     </section>
 </main>
 <%- include('./components/footer.ejs') %>
         <script>
-        document.addEventListener('click', (e) => {
-        const id = e.target?.dataset?.id || null;
-        if (id) {
-            fetch(`/posts/${id}`, {
-                method: 'DELETE',
-            }).then(() => {
-                window.location.href = '/posts';
+            document.addEventListener('click', (e) => {
+                const id = e.target?.dataset?.id || null;
+                if (id) {
+                    fetch(`/posts/${id}`, {
+                        method: 'DELETE',
+                    }).then(() => {
+                        window.location.reload();
+                    })
+                }
             })
-        }
-    })
         </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

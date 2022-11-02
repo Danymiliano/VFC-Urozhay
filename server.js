@@ -1,43 +1,25 @@
 const express = require('express');
 const morgan = require('morgan')
-const path = require('path');
 const mongoose = require('mongoose');
-const Post = require('./models/post');
-const token = require('./token/token')
+const methodOverride = require('method-override')
+const setPath = require('./helpers/set-path')
+const postRoutes = require('./routes/post-routes')
+const token = require('./token/token');
 
 const app = express();
-
-// Шаблонизатор ejs (работает как мидлвар также)
 
 app.set('view engine', 'ejs');
 
 const PORT = process.env.PORT || 3000;
 const HOST = 'localhost';
-const db = `mongodb+srv://Danymiliano:${token}@VFC-Urozhay.5tl0qwi.mongodb.net/news?retryWrites=true&w=majority`;
+const db = `mongodb+srv://Danymiliano:${token}@VFC-Urozhay.5tl0qwi.mongodb.net/posts?retryWrites=true&w=majority`;
 
-async function connectToDatabase() {
-    try {
-        await mongoose.connect(db, {
-            useNewUrlParser: true,
-        })
-        console.log('Успешно законнектились к базе данных');
-    } catch (error) {
-        console.log(error);
-    }
-}
-connectToDatabase()
-
-// const post = {
-//     date: Date(),
-//     title,
-//     author,
-//     text,
-// }
-// res.render(setPath('findus'), { post, title })
-
-// Функция установки путей к файлам
-
-const setPath = (page) => path.resolve(__dirname, 'views', `${page}.ejs`)
+mongoose
+    .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then((res) => console.log('Установили соединение с базой данных'))
+    .catch((error) => {
+    console.log(error);
+})
 
 app.listen(PORT, HOST, (error) => {
     if (error) {
@@ -47,19 +29,15 @@ app.listen(PORT, HOST, (error) => {
     }
 })
 
-// Мидлвар с добавлением исключения для всего в папке
-
 app.use(express.static('./'));
-
-// Мидлвар с логгером
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 
-// Мидлвар с парсингом
-
 app.use(express.urlencoded({ extended: false }))
 
-// Роутинг страниц
+app.use(methodOverride('_method'));
+
+app.use(postRoutes);
 
 app.get('/', (req, res) => {
     const title = 'Home'
@@ -76,53 +54,15 @@ app.get('/about', (req, res) => {
     res.render(setPath('about'), { title })
 })
 
-// По методу post запрашиваем данные и 
-// отправляем данные с запроса обратно
-
-app.post('/findus', (req, res) => {
-    const { title, author, text } = req.body;
-    const post = new Post({ title, author, text, });
-    let result;
-    async function getNewPost () {
-        try {
-            await post.save()
-            await res.send(result)
-        } catch (error) {
-            console.log(error);
-            res.render(setPath('404'), { title: 'Error'})
-        }
-    }
-    getNewPost()
-    res.render(setPath('findus'), { title, post, result })
-})
-
-app.get('/findus/:id', (req, res) => {
-    res.render(setPath('post'))
-})
-
-app.get('/findus', (req, res) => {
-    const title = 'Find us'
-    const post = {
-        id: '1',
-        text: 'Тут какой-то текст',
-        title: 'Заголовок dddddd',
-        date: '05.09.2022',
-        author: 'Максим',
-    }
-    res.render(setPath('findus'), { title, post })
-});
-
-app.get('/registration', (req, res) => {
-    const title = 'Registration'
-    res.render(setPath('registration'), { title })
+app.get('/add-post', (req, res) => {
+    const title = 'Add new post'
+    res.render(setPath('add-post'), { title })
 })
 
 app.get('/squad', (req, res) => {
     const title = 'Squad'
     res.render(setPath('squad'), { title })
 })
-
-// Мидлвар с отловом ошибок в адресе
 
 app.use((req, res) => {
     const title = '404'

@@ -26,7 +26,7 @@
     <main>
     <section class="send__posts">
     <div class="post-wrapper">
-        <form action="" method="post" class="post-form">
+        <form action="/add-post" method="post" class="post-form">
             <div class="name-and-author">
             <div class="name-of-post">
                 <label for="theme" class="name-of-post_name">Тема:</label>
@@ -45,18 +45,6 @@
             <button type="submit" class="send-button">Отправить</button>
         </div>
         </form>
-    </div>
-    <article class="post-background_wrapper">
-    <article class="post-background">
-        <h2 class="post-header"><%= post.title %></h2>
-        <p class="post-text"><%= post.text || 'No text' %></p>
-        <div class="post-date-and-name">
-            <p class="post-date"><strong><%= post.date || 'No date' %></strong></p>
-            <p class="post-name"><strong><%= post.author %></strong></p>
-        </div>
-    </article>
-    </div>
-
     </section>
 </main>
 <%- include('./components/footer.ejs') %>

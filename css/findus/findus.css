@@ -200,6 +200,7 @@
 }
 
 .post-background {
+    position: relative;
     width: fit-content;
     min-width: 500px;
     height: fit-content;
@@ -207,6 +208,7 @@
     border-radius: 3px;
     background-color: rgb(146, 192, 160);
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .post-header {
@@ -222,4 +224,60 @@
     justify-content: space-between;
     padding: 10px 10px 20px 10px;
     font-size: 20px;
+}
+
+.posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.btn-delete {
+    position: absolute;
+    left: 92%;
+    bottom: 76%;
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.fa-trash-alt {
+    position: absolute;
+    left: 93.5%;
+    bottom: 73%;
+    cursor: pointer;
+    color: black;
+    z-index: 5;
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.btn-edit {
+    position: absolute;
+    left: 85%;
+    bottom: 76%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.fa-edit {
+    position: absolute;
+    left: 86.6%;
+    bottom: 73%;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
