@@ -5,7 +5,6 @@ require('dotenv').config()
 const methodOverride = require('method-override')
 const setPath = require('./helpers/set-path')
 const postRoutes = require('./routes/post-routes')
-const token = require('./token/token');
 
 const app = express();
 
@@ -14,6 +13,7 @@ app.set('view engine', 'ejs');
 const PORT = process.env.PORT || 3000;
 const HOST = 'localhost';
 const db = process.env.MONGO_URL
+
 mongoose
     .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((res) => console.log('Установили соединение с базой данных'))
