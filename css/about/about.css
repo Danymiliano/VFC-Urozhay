@@ -142,7 +142,7 @@
 }
 
 .second__player-description img {
-    max-width: 60%;
+    max-width: 65%;
     margin-top: 50px;
     overflow-x: hidden;
 }
@@ -159,7 +159,7 @@
 }
 
 .second__player-text {
-    margin-top: 530px;
+    margin-top: 430px;
     margin-left: 30px;
 }
 
@@ -295,7 +295,7 @@
     margin-right: 50px;
 }
 
-.decoration p, h2 {
+.decoration .decor-header, .decor-paragraph {
     margin: 0;
     text-align: center;
 }

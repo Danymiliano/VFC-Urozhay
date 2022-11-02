@@ -205,8 +205,9 @@
     min-width: 500px;
     height: fit-content;
     min-height: 100px;
+    color: var(--secondColor);
     border-radius: 3px;
-    background-color: rgb(146, 192, 160);
+    background-color: var(--mainColor);
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -264,7 +265,7 @@
     bottom: 76%;
     border: none;
     border-radius: 5px;
-    background-color: var(--mainColor);
+    background-color: rgb(87, 86, 86);
     width: 30px;
     height: 30px;
     cursor: pointer;
