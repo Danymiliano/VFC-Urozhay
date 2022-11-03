@@ -16,4 +16,4 @@ ____
 + HTML, CSS practice, decorative elements, semantic tags, adaptive layout
 ____
 + Libraries and frameworks: 
-  + http, os, fs, path, nodemon, express, method override, mongoose, morgan etc.)
+  + http, os, fs, path, nodemon, express, method override, mongoose, morgan
