@@ -51,13 +51,13 @@ const deletePost = (req, res) => {
 
 const createPlayerPost = (req, res) => {
     const { title, text, author } = req.body;
-    const player = new PlayerPost({ title, author, text, playerImage });
+    const player = new PlayerPost({ title, author, text, });
     player
         .save({
             text,
             author,
             title,
-            playerImage,
+            playerImage: '',
         })
         .then((result) => res.redirect('/posts'))
         .catch((error) => {
