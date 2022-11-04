@@ -1,9 +1,10 @@
 const setPath = require('../helpers/set-path')
-const Post = require('../models/post');
+const PlayerPost = require('../models/post');
+require('dotenv').config();
 
 const getPost = (req, res) => {
     const title = 'Post'
-    Post
+    PlayerPost
         .findById(req.params.id)
         .then((post) => res.render(setPath('post'), { post, title }))
         .catch((error) => {
@@ -15,7 +16,7 @@ const getPost = (req, res) => {
 const editPost = (req, res) => {
     const { title, author, text } = req.body;
     const { id, } = req.params;
-    Post
+    PlayerPost
         .findByIdAndUpdate(id, { title, author, text })
         .then((result) => res.redirect(`/posts/${id}`))
         .catch((error) => {
@@ -26,7 +27,7 @@ const editPost = (req, res) => {
 
 const getEditPost = (req, res) => {
     const title = 'Edit Post'
-    Post
+    PlayerPost
         .findById(req.params.id)
         .then((post) => res.render(setPath('edit-post'), { post, title }))
         .catch((error) => {
@@ -37,7 +38,7 @@ const getEditPost = (req, res) => {
 
 const deletePost = (req, res) => {
     const title = 'Post'
-    Post
+    PlayerPost
         .findByIdAndDelete(req.params.id)
         .then((result) => {
             res.sendStatus(200)
@@ -48,11 +49,16 @@ const deletePost = (req, res) => {
     })
 }
 
-const addPost = (req, res) => {
+const createPlayerPost = (req, res) => {
     const { title, text, author } = req.body;
-    const post = new Post({ title, author, text });
-    post
-        .save()
+    const player = new PlayerPost({ title, author, text, playerImage });
+    player
+        .save({
+            text,
+            author,
+            title,
+            playerImage,
+        })
         .then((result) => res.redirect('/posts'))
         .catch((error) => {
         console.log(error);
@@ -62,7 +68,7 @@ const addPost = (req, res) => {
 
 const getPosts = (req, res) => {
     const title = 'Posts';
-    Post
+    PlayerPost
         .find()
         .sort({ createdAt: -1 })
         .then((posts) => res.render(setPath('posts'), { posts, title }))
@@ -88,7 +94,7 @@ const getAboutPage = (req, res) => {
 }
 
 const getAddPostPage = (req, res) => {
-        const title = 'Add new post'
+        const title = 'Add new player'
         res.render(setPath('add-post'), { title })
 }
 
@@ -102,7 +108,7 @@ module.exports = {
     editPost,
     getEditPost,
     deletePost,
-    addPost,
+    createPlayerPost,
     getPosts,
     getHomePage,
     getIndexPage,

@@ -5,6 +5,8 @@ require('dotenv').config()
 const methodOverride = require('method-override')
 const setPath = require('./helpers/set-path')
 const postRoutes = require('./routes/post-routes')
+const multer = require('multer');
+const moment = require('moment');
 
 const app = express();
 

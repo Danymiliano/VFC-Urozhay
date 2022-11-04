@@ -1,7 +1,9 @@
+const { fileLoader } = require('ejs');
 const mongoose = require('mongoose');
+require('dotenv').config()
 const Schema = mongoose.Schema;
 
-const postSchema = new Schema({
+const playerSchema = new Schema({
     text: {
         type: String,
         required: true,
@@ -14,8 +16,12 @@ const postSchema = new Schema({
         type: String,
         required: true,
     },
+    playerImage: {
+        type: String,
+        default: '',
+    }
 }, { timestamps: true });
 
-const Post = mongoose.model('Post', postSchema);
+const PlayerPost = mongoose.model('Player', playerSchema);
 
-module.exports = Post;
+module.exports = PlayerPost;

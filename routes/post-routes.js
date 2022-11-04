@@ -1,9 +1,10 @@
 const express = require('express');
+const upload = require('../js/upload')
 const { getPost } = require('../controller/post-controller')
 const { editPost } = require('../controller/post-controller')
 const { getEditPost } = require('../controller/post-controller')
 const { deletePost } = require('../controller/post-controller')
-const { addPost } = require('../controller/post-controller')
+const { createPlayerPost } = require('../controller/post-controller')
 const { getPosts } = require('../controller/post-controller')
 const { getHomePage } = require('../controller/post-controller')
 const { getIndexPage } = require('../controller/post-controller')
@@ -31,7 +32,7 @@ router.get('/edit/:id', getEditPost);
 
 router.delete('/posts/:id', deletePost);
 
-router.post('/add-post', addPost);
+router.post('/add-post', upload.single('playerImage'), createPlayerPost);
 
 router.get('/posts', getPosts);
 

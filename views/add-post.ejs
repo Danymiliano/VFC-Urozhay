@@ -19,20 +19,26 @@
     <main>
     <section class="send__posts">
     <div class="post-wrapper">
-        <form action="/add-post" method="post" class="post-form">
+        <form action="/add-post" method="post" class="post-form" enctype="multipart/form-data">
             <div class="name-and-author">
             <div class="name-of-post">
-                <label for="theme" class="name-of-post_name">Тема:</label>
-                <input name="title" id="theme" type="text" class="name-of-post_input" placeholder="Название темы">
+                <label for="theme" class="name-of-post_name">Клуб:</label>
+                <input name="title" id="theme" type="text" class="name-of-post_input" placeholder="Ваш клуб" min="5" max="20" required>
             </div>
             <div class="author-of-post">
-                <label for="log" class="author-of-post_author">Автор:</label>
-                <input id="log" name="author" type="text" class="author-of-post_input" placeholder="Ваше имя">
+                <label for="log" class="author-of-post_author">Ник:</label>
+                <input id="log" name="author" type="text" class="author-of-post_input" placeholder="Ваш ник" min="2" max="30" required>
+            </div>
+        </div>
+        <div class="picture">
+            <div class="picture-of-post">
+                <label for="player" class="name-of-picture">Изображение:</label>
+                <input type="file" name="playerImage" class="picture-of-post_input" required>
             </div>
         </div>
             <div class="post-textarea">
-                <label for="text">Текст:</label>
-                <textarea type="text" name="text" id="text" cols="30" rows="10" class="post-textarea_inner" placeholder="Текст"></textarea>
+                <label for="text">О себе:</label>
+                <textarea type="text" name="text" id="text" cols="30" rows="10" min="1" max="355" class="post-textarea_inner" placeholder="Текст" required></textarea>
             </div>
             <div class="button-wrapper">
             <button type="submit" class="send-button">Отправить</button>
