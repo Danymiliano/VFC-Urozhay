@@ -15,6 +15,6 @@ ____
 + Git practice
 + HTML, CSS practice, decorative elements, semantic tags, adaptive layout
 ____
-+ Libraries and frameworks: 
++ Packages and frameworks: 
   + http, os, fs - for practice native Node.JS
   + path, nodemon, express, method override, mongoose, morgan, multer
