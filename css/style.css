@@ -85,6 +85,11 @@ body {
     object-fit: cover;
 }
 
+.navLink-active {
+    color: var(--urozhayColor) !important;
+    font-size: 30px;
+}
+
 .navLink {
     color: var(--secondColor);
     padding: 0 20px;

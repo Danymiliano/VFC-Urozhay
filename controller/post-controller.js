@@ -37,7 +37,7 @@ const getEditPost = (req, res) => {
 }
 
 const deletePost = (req, res) => {
-    const title = 'Post'
+    const title = 'Players'
     PlayerPost
         .findByIdAndDelete(req.params.id)
         .then((result) => {
@@ -50,14 +50,17 @@ const deletePost = (req, res) => {
 }
 
 const createPlayerPost = (req, res) => {
-    const { title, text, author } = req.body;
-    const player = new PlayerPost({ title, author, text, });
+    const { title, text, author, nationality, role } = req.body;
+    const playerImage = `${req.file.path}`
+    const player = new PlayerPost({ title, author, text, playerImage, nationality, role });
     player
         .save({
             text,
             author,
             title,
-            playerImage: '',
+            playerImage,
+            nationality,
+            role,
         })
         .then((result) => res.redirect('/posts'))
         .catch((error) => {
@@ -94,7 +97,7 @@ const getAboutPage = (req, res) => {
 }
 
 const getAddPostPage = (req, res) => {
-        const title = 'Add new player'
+        const title = 'New player'
         res.render(setPath('add-post'), { title })
 }
 

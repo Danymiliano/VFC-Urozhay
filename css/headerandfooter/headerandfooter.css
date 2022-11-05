@@ -12,6 +12,16 @@
     --urozhayBrightColor: #73d655;
 }
 
+.navLink-active {
+    color: var(--urozhayColor) !important;
+    font-size: 30px;
+}
+
+.navLink {
+    color: var(--secondColor);
+    padding: 0 20px;
+}
+
 :focus {
     outline-color: var(--urozhayColor);
 }
@@ -19,7 +29,6 @@
 a {
     text-decoration: none;
     list-style: none;
-    color: var(--mainColor);
 }
 
 li {
@@ -65,11 +74,6 @@ body {
     background: var(--darkColor);
     background-size: cover;
     object-fit: cover;
-}
-
-.navLink {
-    color: var(--secondColor);
-    padding: 0 20px;
 }
 
 .header__wrapper > a {

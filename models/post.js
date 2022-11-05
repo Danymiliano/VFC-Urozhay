@@ -18,7 +18,15 @@ const playerSchema = new Schema({
     },
     playerImage: {
         type: String,
-        default: '',
+        required: true,
+    },
+    nationality: {
+        type: String,
+        required: true,
+    },
+    role: {
+        type: String,
+        required: true,
     }
 }, { timestamps: true });
 
