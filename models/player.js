@@ -8,17 +8,16 @@ const playerSchema = new Schema({
         type: String,
         required: true,
     },
-    title: {
+    club: {
         type: String,
         required: true,
     },
-    author: {
+    nickname: {
         type: String,
         required: true,
     },
     playerImage: {
         type: String,
-        required: true,
     },
     nationality: {
         type: String,
@@ -30,6 +29,6 @@ const playerSchema = new Schema({
     }
 }, { timestamps: true });
 
-const PlayerPost = mongoose.model('Player', playerSchema);
+const Player = mongoose.model('Player', playerSchema);
 
-module.exports = PlayerPost;
+module.exports = Player;

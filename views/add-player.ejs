@@ -20,16 +20,16 @@
     <section class="send__posts">
         <h1 class="add-player-archive">Добавьте своего игрока</h1>
     <div class="post-wrapper">
-        <form action="/add-post" method="post" class="post-form" enctype="multipart/form-data">
+        <form action="/add-player" method="post" class="post-form" enctype="multipart/form-data">
             <h2 class="information">Информация</h2>
             <div class="name-and-author">
                 <div class="author-of-post">
                     <label for="log" class="author-of-post_author">Ник:</label>
-                    <input id="log" name="author" type="text" class="author-of-post_input" placeholder="Ваш ник" min="2" max="30" required>
+                    <input id="log" name="nickname" type="text" class="author-of-post_input" placeholder="Ваш ник" min="2" max="30" required>
                 </div>
             <div class="name-of-post">
                 <label for="theme" class="name-of-post_name">Клуб:</label>
-                <input name="title" id="theme" type="text" class="name-of-post_input" placeholder="Ваш клуб" min="5" max="20" required>
+                <input name="club" id="theme" type="text" class="name-of-post_input" placeholder="Ваш клуб" min="5" max="20" required>
             </div>
         </div>
         <div class="picture-and-role">
@@ -68,7 +68,7 @@
     </div>
     <div class="country-pick">
         <label for="countries-list" class="countries-naming">Гражданство:</label>
-        <select id="countries-list" name="nationality" class="countries-list" autocomplete="name" required>     
+        <select id="countries-list" name="nationality" class="countries-list" required>     
             <option value="Австралия">Австралия</option>
 	<option value="Австрия">Австрия</option>
 	<option value="Азербайджан">Азербайджан</option>
@@ -311,7 +311,7 @@
             </div>
             <div class="button-wrapper">
         <div class="lower-buttons">
-            <a href="/posts" class="players-cards">Архив</a>
+            <a href="/players" class="players-cards">Архив</a>
             <button type="submit" class="send-button">Отправить</button>
         </div>
         </div>

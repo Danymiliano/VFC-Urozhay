@@ -20,16 +20,16 @@
         <section class="players"> 
         <h1 class="leaders">Лидеры сообщества</h1>
     <ul class="posts">
-        <% if (posts.length) { %>
-            <% posts.forEach(({ id, title, date, text, author, createdAt, playerImage, nationality, role }) => { %>
+        <% if (players.length) { %>
+            <% players.forEach(({ id, club, date, text, nickname, createdAt, playerImage, nationality, role }) => { %>
         <li>  
     <article class="post-background_wrapper">
     <article class="post-background">
         <div class="player-image">
-        <img src="<%= playerImage %>" alt="">
+        <img src="<%= playerImage %>" alt="Игрок">
     </div>
-        <p class="post-name"><a class="post-name_color" href="/posts/<%= id %>"><strong>Ник:</strong> <%= author %></a></p>
-        <p class="post-header"><strong>Клуб:</strong> <%= title %></p>
+        <p class="post-name"><a class="post-name_color" href="/players/<%= id %>"><strong>Ник:</strong> <%= nickname %></a></p>
+        <p class="post-header"><strong>Клуб:</strong> <%= club %></p>
         <p class="post-nationality"><strong>Гражданство:</strong> <%= nationality %></p>
         <p class="post-role"><strong>Амплуа:</strong> <%= role %></p>
         <p class="post-text"><strong>О себе:</strong> <%= text %></p>
@@ -48,7 +48,7 @@
             document.addEventListener('click', (e) => {
                 const id = e.target?.dataset?.id || null;
                 if (id) {
-                    fetch(`/posts/${id}`, {
+                    fetch(`/players/${id}`, {
                         method: 'DELETE',
                     }).then(() => {
                         window.location.reload();

@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config()
 const methodOverride = require('method-override')
 const setPath = require('./helpers/set-path')
-const postRoutes = require('./routes/post-routes')
-const multer = require('multer');
-const moment = require('moment');
+const postRoutes = require('./routes/player-routes')
 
 const app = express();
 
