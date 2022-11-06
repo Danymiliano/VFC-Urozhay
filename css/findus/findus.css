@@ -386,6 +386,14 @@
     cursor: pointer;
 }
 
+.edit-button {
+    position: absolute;
+    fill: var(--mainColor);
+    cursor: pointer;
+    left: 93.5%;
+    bottom: 88%;
+}
+
 .fa-edit {
     position: absolute;
     left: 86.6%;
