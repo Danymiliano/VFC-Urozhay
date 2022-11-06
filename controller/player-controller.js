@@ -2,7 +2,7 @@ const setPath = require('../helpers/set-path')
 const Player = require('../models/player');
 require('dotenv').config();
 
-const handleError = (req, error) => {
+const handleError = (res, error) => {
     console.log(error);
     res.render('404', { title: 'Error' })
 }

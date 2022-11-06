@@ -87,6 +87,7 @@ body {
 
 .navLink-active {
     color: var(--urozhayColor) !important;
+    box-shadow: 15px;
     font-size: 30px;
 }
 
