@@ -22,6 +22,7 @@ const setNavItemsOptions = () => {
 }
 setNavItemsOptions()
 
+if (window.location.pathname == '/index') {
 const setModalWindow = () => {
   const modalButton = document.querySelector('.btn__description')
   const modalOverlay = document.querySelector('.modal__overlay')
@@ -39,6 +40,8 @@ const setModalWindow = () => {
 })
 }
 setModalWindow()
+}
+
 
 
 
