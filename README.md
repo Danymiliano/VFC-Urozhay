@@ -13,7 +13,7 @@ ____
 + Native Node.JS & external modules;
 + Theoretical knowledge and features of the V8 and Libuv engine;
 + EJS template engine and SSR;
-+ Interaction with non-relational MongoDB database;
++ Interaction with a document oriented NoSQL MongoDB database;
 + NPM and YARN package managers;
 + Git practice;
 + HTML, CSS practice, decorative elements, semantic tags, adaptive layout;
